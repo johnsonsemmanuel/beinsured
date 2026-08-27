@@ -100,18 +100,6 @@ export default function Partners({ onOpenChannelSelector }) {
   return (
     <div className="py-10 px-4 sm:px-8 max-w-7xl mx-auto space-y-12">
       
-      {/* Back button */}
-      <div>
-        <Link 
-          to="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#FEBD19] transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Home</span>
-        </Link>
-      </div>
-
       {/* Page Title & Intro */}
       <div className="space-y-4 max-w-3xl">
         <SectionTag text="Institutional Directory" />
