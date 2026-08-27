@@ -3,7 +3,6 @@ import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LegitimacyBanner from '../components/LegitimacyBanner';
 import { ShieldCheck, Users, Smartphone } from 'lucide-react';
-import { ChannelBadgeGroup } from '../components/ChannelLogos';
 
 export default function About({ onOpenChannelSelector }) {
   return (
@@ -45,7 +44,6 @@ export default function About({ onOpenChannelSelector }) {
               <p className="text-xs text-slate-600 leading-relaxed">
                 Enter your vehicle registration number on USSD *170# or WhatsApp, pay via MoMo, and receive your digital insurance verification immediately.
               </p>
-              <ChannelBadgeGroup className="pt-1" />
             </div>
 
             <PillButton variant="gold" onClick={onOpenChannelSelector}>

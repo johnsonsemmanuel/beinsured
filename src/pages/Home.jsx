@@ -7,7 +7,6 @@ import AnimatedTextCycle from '../components/AnimatedTextCycle';
 import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
 import PhoneCarousel from '../components/PhoneCarousel';
-import { ChannelBadgeGroup } from '../components/ChannelLogos';
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
@@ -224,7 +223,17 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
             </p>
           </div>
 
-          <ChannelBadgeGroup />
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
+              MTN MoMo Rail
+            </div>
+            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
+              Licensed Underwriters
+            </div>
+            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
+              WhatsApp Verified
+            </div>
+          </div>
         </div>
       </section>
 

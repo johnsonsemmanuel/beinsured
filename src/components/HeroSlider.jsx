@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import AnimatedTextCycle from './AnimatedTextCycle';
 import PillButton from './PillButton';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
-import { USSDIcon, WhatsAppIcon, MoMoIcon } from './ChannelLogos';
 
 export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }) {
   const slides = [
@@ -125,7 +124,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
           </div>
         </div>
 
-        {/* Bottom Slide Indicator & Channel Logos */}
+        {/* Bottom Slide Indicator */}
         <div className="relative z-10 pt-6 border-t border-white/20 flex flex-wrap items-center justify-between gap-4 text-xs text-white/90 font-medium">
           <div className="flex items-center gap-2">
             {slides.map((_, i) => (
@@ -140,19 +139,10 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs text-white font-bold">
-            <span className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/20">
-              <USSDIcon className="w-3.5 h-3.5 text-[#FEBD19]" />
-              USSD <strong className="text-[#FEBD19]">*170#</strong>
-            </span>
-            <span className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/20">
-              <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400" />
-              WhatsApp Bot
-            </span>
-            <span className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/20">
-              <MoMoIcon className="w-4 h-4" />
-              MTN MoMo Rail
-            </span>
+          <div className="flex flex-wrap items-center gap-6 text-xs text-white/90 font-semibold">
+            <span>Instant Cover on USSD <strong className="text-[#FEBD19]">*170#</strong></span>
+            <span>WhatsApp Bot (+233 53 110 0408)</span>
+            <span>MTN MoMo Integrated</span>
           </div>
         </div>
 
