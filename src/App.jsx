@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ChannelSelector from './components/ChannelSelector';
 import PolicyLookupModal from './components/PolicyLookupModal';
+import CookieConsent from './components/CookieConsent';
 import TopSubtleHeroBackground from './components/TopSubtleHeroBackground';
 import { PageTransition } from './components/PageTransition';
 import Home from './pages/Home';
@@ -125,6 +126,9 @@ export default function App() {
         <Footer 
           onOpenChannelSelector={() => setChannelSelectorOpen(true)}
         />
+
+        {/* Global Cookie Consent Floating Banner & Re-Open Trigger */}
+        <CookieConsent />
 
         {/* Modals */}
         <ChannelSelector 
