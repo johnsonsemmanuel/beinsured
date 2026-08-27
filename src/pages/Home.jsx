@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
-import LegitimacyBanner from '../components/LegitimacyBanner';
 import AnimatedTextCycle from '../components/AnimatedTextCycle';
 import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
@@ -26,27 +25,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         onOpenPolicyLookup={onOpenPolicyLookup}
       />
 
-      {/* 2. LEGITIMACY & VERIFICATION BANNER */}
-      <LegitimacyBanner onOpenChannelSelector={onOpenChannelSelector} />
-
-      {/* 3. MOBILE APP & CHANNEL SHOWCASE */}
-      <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <SectionTag text="Mobile-Native Insurance" className="justify-center" />
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-            Designed to fit directly in your pocket
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-medium">
-            See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
-          <PhoneCarousel />
-        </div>
-      </section>
-
-      {/* 4. ABOUT US / PURPOSE STATEMENT */}
+      {/* 2. ABOUT US / PURPOSE STATEMENT */}
       <section id="about" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <SectionTag text="About Us" />
 
@@ -91,7 +70,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 5. COVERAGE OPTIONS */}
+      {/* 3. COVERAGE OPTIONS */}
       <section id="coverage" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <SectionTag text="Car Cover Options" />
@@ -144,7 +123,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 6. HOW IT WORKS */}
+      {/* 4. HOW IT WORKS */}
       <section id="how-it-works" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <SectionTag text="How It Works" />
@@ -161,7 +140,24 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         <PinnedHowItWorks className="pt-4" />
       </section>
 
-      {/* 7. CLAIMS GUIDANCE SECTION */}
+      {/* 5. MOBILE APP & CHANNEL SHOWCASE (Positioned right after How It Works) */}
+      <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <SectionTag text="Mobile-Native Insurance" className="justify-center" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Designed to fit directly in your pocket
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
+            See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
+          <PhoneCarousel />
+        </div>
+      </section>
+
+      {/* 6. CLAIMS GUIDANCE SECTION */}
       <section id="claims" className="px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="card-cream p-8 sm:p-12 space-y-8">
           
@@ -201,43 +197,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 8. PARTNERS & UNDERWRITERS BANNER */}
-      <section id="partners" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
-        <div className="flex items-center justify-between">
-          <SectionTag text="Partners & Insurers" />
-          <Link 
-            to="/partners"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-xs font-bold text-brand-dark hover:text-[#FEBD19] hover:underline flex items-center gap-1 cursor-pointer transition-colors"
-          >
-            <span>View Underwriter Directory</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-lg font-extrabold text-brand-dark">Underwritten by Licensed Motor Insurers</h3>
-            <p className="text-xs text-slate-600 max-w-md">
-              All BeINsured motor policies are underwritten by authorized partner insurance institutions under national regulatory frameworks.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
-              MTN MoMo Rail
-            </div>
-            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
-              Licensed Underwriters
-            </div>
-            <div className="px-4 py-2 bg-brand-cream border border-slate-200 font-extrabold text-slate-800 text-xs uppercase tracking-wider rounded-xl">
-              WhatsApp Verified
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. CTA SECTION WITH ANIMATED TEXT CYCLE */}
+      {/* 7. CTA SECTION WITH ANIMATED TEXT CYCLE */}
       <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3">
