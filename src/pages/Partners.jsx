@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LogoCloud from '../components/LogoCloud';
 import { ArrowLeft } from 'lucide-react';
 
-export default function Partners({ onOpenChannelSelector, setActivePage }) {
+export default function Partners({ onOpenChannelSelector }) {
   const partnerLogos = [
     {
       id: 'enterprise',
@@ -101,13 +102,14 @@ export default function Partners({ onOpenChannelSelector, setActivePage }) {
       
       {/* Back button */}
       <div>
-        <button 
-          onClick={() => { setActivePage('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        <Link 
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#FEBD19] transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
-        </button>
+        </Link>
       </div>
 
       {/* Page Title & Intro */}

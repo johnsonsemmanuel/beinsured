@@ -1,48 +1,28 @@
 import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import PillButton from './PillButton';
 
-export default function Header({ onOpenChannelSelector, activePage, setActivePage }) {
+export default function Header({ onOpenChannelSelector }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'how-it-works', label: 'How It Works' },
-    { id: 'coverage', label: 'Car Coverage' },
-    { id: 'claims', label: 'Claims' },
-    { id: 'partners', label: 'Partners & Insurers' },
-    { id: 'about', label: 'About Us' },
+    { path: '/', label: 'Home' },
+    { path: '/how-it-works', label: 'How It Works' },
+    { path: '/coverage', label: 'Car Coverage' },
+    { path: '/claims', label: 'Claims' },
+    { path: '/partners', label: 'Partners & Insurers' },
+    { path: '/about', label: 'About Us' },
   ];
-
-  const handleNavClick = (id) => {
-    setMobileMenuOpen(false);
-    if (id === 'partners') {
-      setActivePage('partners');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (id === 'home') {
-      setActivePage('home');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      if (activePage !== 'home') {
-        setActivePage('home');
-        setTimeout(() => {
-          const el = document.getElementById(id);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <header className="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-slate-200/60 py-3.5 px-4 sm:px-8 transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Official Brand Logo */}
-        <div 
-          onClick={() => handleNavClick('home')}
+        <Link 
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-2 cursor-pointer group py-1"
         >
           <img 
@@ -50,22 +30,23 @@ export default function Header({ onOpenChannelSelector, activePage, setActivePag
             alt="BeINsured Car Insurance Logo" 
             className="h-11 sm:h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]"
           />
-        </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
           {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNavClick(link.id)}
-              className={`hover:text-[#FEBD19] transition-colors cursor-pointer ${
-                (activePage === link.id || (activePage === 'home' && link.id === 'home')) 
-                  ? 'text-brand-dark font-bold border-b-2 border-brand-gold pb-0.5' 
-                  : ''
-              }`}
+            <NavLink
+              key={link.path}
+              to={link.path}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className={({ isActive }) => 
+                `hover:text-[#FEBD19] transition-colors cursor-pointer ${
+                  isActive ? 'text-brand-dark font-bold border-b-2 border-brand-gold pb-0.5' : ''
+                }`
+              }
             >
               {link.label}
-            </button>
+            </NavLink>
           ))}
         </nav>
 
@@ -93,18 +74,30 @@ export default function Header({ onOpenChannelSelector, activePage, setActivePag
         <div className="lg:hidden mt-3 pt-4 border-t border-slate-200/60 pb-4 px-2 space-y-3 bg-white rounded-2xl shadow-xl p-4">
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNavClick(link.id)}
-                className="text-left px-3 py-2 rounded-xl font-medium text-slate-800 hover:bg-brand-cream transition-colors"
+              <NavLink
+                key={link.path}
+                to={link.path}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className={({ isActive }) =>
+                  `text-left px-3 py-2 rounded-xl font-medium transition-colors ${
+                    isActive ? 'bg-[#FEBD19]/20 text-brand-dark font-bold' : 'text-slate-800 hover:bg-brand-cream'
+                  }`
+                }
               >
                 {link.label}
-              </button>
+              </NavLink>
             ))}
           </nav>
 
           <div className="pt-2">
-            <PillButton variant="gold" onClick={() => { setMobileMenuOpen(false); onOpenChannelSelector(); }} className="w-full justify-center">
+            <PillButton 
+              variant="gold" 
+              onClick={() => { setMobileMenuOpen(false); onOpenChannelSelector(); }} 
+              className="w-full justify-center"
+            >
               Get Car Cover
             </PillButton>
           </div>
