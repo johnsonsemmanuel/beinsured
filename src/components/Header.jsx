@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import PillButton from './PillButton';
@@ -6,6 +6,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header({ onOpenChannelSelector }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    // Check initial scroll state
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -17,7 +30,13 @@ export default function Header({ onOpenChannelSelector }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-brand-cream/70 backdrop-blur-md border-b border-slate-200/50 py-3.5 px-4 sm:px-8 transition-all">
+    <header 
+      className={`sticky top-0 z-40 py-3.5 px-4 sm:px-8 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-brand-cream/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm' 
+          : 'bg-transparent border-b border-transparent shadow-none'
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Official Brand Logo */}
