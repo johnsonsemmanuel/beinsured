@@ -7,6 +7,7 @@ import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
 import PhoneCarousel from '../components/PhoneCarousel';
 import ScrollReveal from '../components/ScrollReveal';
+import BrandVideoPlayer from '../components/BrandVideoPlayer';
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
@@ -25,6 +26,22 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         onOpenChannelSelector={onOpenChannelSelector}
         onOpenPolicyLookup={onOpenPolicyLookup}
       />
+
+      {/* 1.5 BRAND FILM — Inline Video Section */}
+      <ScrollReveal>
+        <section className="px-4 sm:px-8 max-w-5xl mx-auto space-y-5">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <SectionTag text="Brand Film" className="justify-center" />
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
+              See what BeINsured is all about
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-sm font-medium">
+              Watch how we're making motor insurance simple, instant, and accessible for every Ghanaian driver.
+            </p>
+          </div>
+          <BrandVideoPlayer />
+        </section>
+      </ScrollReveal>
 
       {/* 2. ABOUT US / PURPOSE STATEMENT */}
       <ScrollReveal>
