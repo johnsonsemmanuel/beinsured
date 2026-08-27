@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PillButton from './PillButton';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 // Custom SVG icon for TikTok
 function TikTokIcon({ className = "w-4 h-4" }) {
@@ -48,7 +48,7 @@ export default function Footer({ onOpenChannelSelector }) {
               <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Connect With Us</div>
               <div className="flex items-center gap-3">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/beinsuredautoinsurance" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
@@ -57,16 +57,7 @@ export default function Footer({ onOpenChannelSelector }) {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a 
-                  href="https://tiktok.com" 
+                  href="https://www.tiktok.com/@beinsuredautoinsurance" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
