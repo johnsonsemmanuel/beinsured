@@ -46,31 +46,32 @@ export default function PhoneCarousel({ images, className = "" }) {
   return (
     <div className={`flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 ${className}`}>
       
-      {/* iPhone 15 Pro Max Titanium Mockup Frame */}
-      <div className="relative w-[285px] sm:w-[315px] h-[580px] sm:h-[620px] bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 rounded-[52px] p-2 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.45)] border-2 border-slate-700/80 ring-1 ring-slate-600/30 shrink-0">
+      {/* iPhone 15 Pro Max Titanium Mockup Outer Shell */}
+      <div className="relative w-[285px] sm:w-[315px] h-[580px] sm:h-[630px] rounded-[52px] p-[8px] bg-gradient-to-b from-slate-700 via-slate-800 to-slate-950 shadow-[0_30px_70px_-15px_rgba(15,23,42,0.45)] border border-slate-600/60 ring-1 ring-white/10 shrink-0">
         
-        {/* Sleek iPhone 15 Pro Titanium Edge Accents */}
-        <div className="absolute top-24 -left-1 w-1 h-7 bg-slate-700/60 rounded-l-md" /> {/* Action Button */}
-        <div className="absolute top-36 -left-1 w-1 h-12 bg-slate-700/60 rounded-l-md" /> {/* Volume Up */}
-        <div className="absolute top-52 -left-1 w-1 h-12 bg-slate-700/60 rounded-l-md" /> {/* Volume Down */}
-        <div className="absolute top-40 -right-1 w-1 h-16 bg-slate-700/60 rounded-r-md" /> {/* Power Button */}
+        {/* iPhone 15 Pro Metallic Hardware Side Buttons */}
+        <div className="absolute top-24 -left-1.5 w-1.5 h-7 bg-slate-600 rounded-l-md shadow-sm" /> {/* Action Button */}
+        <div className="absolute top-36 -left-1.5 w-1.5 h-12 bg-slate-600 rounded-l-md shadow-sm" /> {/* Volume Up */}
+        <div className="absolute top-52 -left-1.5 w-1.5 h-12 bg-slate-600 rounded-l-md shadow-sm" /> {/* Volume Down */}
+        <div className="absolute top-40 -right-1.5 w-1.5 h-16 bg-slate-600 rounded-r-md shadow-sm" /> {/* Power Button */}
 
-        {/* Dynamic Island Notch */}
-        <div className="absolute top-4.5 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-40 flex items-center justify-between px-2.5 shadow-md">
-          <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
-          <div className="w-2 h-2 rounded-full bg-blue-950/80 border border-blue-900/60" />
-        </div>
-
-        {/* Edge-to-Edge Screen Display (Top to Down, Zero Bezels Padding) */}
-        <div className="relative w-full h-full bg-black rounded-[44px] overflow-hidden border border-slate-900/50">
+        {/* Pixel-Perfect Inner OLED Display Box */}
+        <div className="relative w-full h-full bg-slate-950 rounded-[44px] overflow-hidden shadow-inner border border-slate-900">
           
+          {/* Dynamic Island Pill Notch - Positioned Floating Comfortably Inside Screen (not touching top bezel) */}
+          <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-24 h-[22px] bg-black rounded-full z-40 flex items-center justify-between px-2.5 shadow-md border border-slate-800/80 pointer-events-none">
+            <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-700/60" /> {/* Front Camera Lens */}
+            <div className="w-2 h-2 rounded-full bg-blue-950/90 border border-blue-900/60" /> {/* FaceID Sensor */}
+          </div>
+
+          {/* Screen Content - Edge-to-Edge Top to Down Display */}
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 15 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
+              exit={{ opacity: 0, x: -15 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="w-full h-full"
             >
               {active.src ? (
@@ -85,8 +86,11 @@ export default function PhoneCarousel({ images, className = "" }) {
             </motion.div>
           </AnimatePresence>
 
-          {/* iPhone Home Indicator Bar */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/70 backdrop-blur-md rounded-full z-40 pointer-events-none drop-shadow-sm" />
+          {/* Subtle Glass Reflection Glare */}
+          <div className="pointer-events-none absolute inset-0 rounded-[44px] bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.07] z-30" />
+
+          {/* Home Indicator Bar */}
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/70 backdrop-blur-md rounded-full z-40 pointer-events-none shadow-sm" />
         </div>
 
       </div>
