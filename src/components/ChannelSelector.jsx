@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import { X, Smartphone, MessageSquare, Shield, Check, Copy, ExternalLink, Car } from 'lucide-react';
+import { X, Smartphone, Shield, Check, Copy, ExternalLink } from 'lucide-react';
 import PillButton from './PillButton';
 import QRCode from './QRCode';
+import momoLogo from '../assets/momo_logo.png';
+
+// Official WhatsApp icon SVG
+const WhatsAppIcon = ({ className = "w-5 h-5" }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+);
 
 export default function ChannelSelector({ isOpen, onClose }) {
   const [activeChannel, setActiveChannel] = useState('ussd'); // 'ussd' | 'whatsapp' | 'momo'
@@ -70,7 +78,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
             }`}
           >
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${activeChannel === 'whatsapp' ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'}`}>
-              <MessageSquare className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5" />
             </div>
             <div>
               <div className="font-bold text-xs sm:text-sm">WhatsApp</div>
@@ -87,8 +95,8 @@ export default function ChannelSelector({ isOpen, onClose }) {
                 : 'text-slate-600 hover:bg-white/60 border border-transparent'
             }`}
           >
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${activeChannel === 'momo' ? 'bg-brand-gold text-brand-dark font-extrabold' : 'bg-slate-200 text-slate-700'}`}>
-              <Car className="w-5 h-5" />
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden ${activeChannel === 'momo' ? 'bg-[#FFC800] ring-2 ring-[#FFC800]/30' : 'bg-slate-100'}`}>
+              <img src={momoLogo} alt="MTN MoMo" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <div className="font-bold text-xs sm:text-sm">MTN MoMo</div>
@@ -164,16 +172,16 @@ export default function ChannelSelector({ isOpen, onClose }) {
 
                 <div className="flex flex-col items-center gap-3 shrink-0">
                   <div className="p-3 bg-white rounded-2xl border border-emerald-200 shadow-sm flex flex-col items-center text-center">
-                    <QRCode value="https://wa.me/233000000000?text=Hi%20BeInsured%20I%20want%20car%20insurance" size={112} fgColor="#0F172A" />
+                    <QRCode value="https://wa.me/233531100408?text=Hi%20BeInsured%20I%20want%20car%20insurance" size={112} fgColor="#0F172A" />
                     <span className="text-[10px] text-slate-500 mt-2 font-mono font-medium">Scan to Chat on WhatsApp</span>
                   </div>
                   <a
-                    href="https://wa.me/233000000000?text=Hi%20BeInsured%20I%20want%20car%20insurance"
+                    href="https://wa.me/233531100408?text=Hi%20BeInsured%20I%20want%20car%20insurance"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors shadow-sm cursor-pointer"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     <span>Open WhatsApp</span>
                     <ExternalLink className="w-3.5 h-3.5 opacity-80" />
                   </a>
@@ -191,7 +199,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                     <span className="text-xs font-semibold text-amber-800 uppercase tracking-wide">Integrated In-App Channel</span>
                     <h4 className="text-lg font-extrabold text-slate-900">MTN MoMo App Marketplace</h4>
                   </div>
-                  <Car className="w-8 h-8 text-amber-600" />
+                  <img src={momoLogo} alt="MTN MoMo" className="w-12 h-12 object-contain" />
                 </div>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                   BeInsured Motor is officially embedded directly inside the MTN MoMo smartphone app marketplace. Buy car insurance and manage renewals straight from your MoMo wallet.

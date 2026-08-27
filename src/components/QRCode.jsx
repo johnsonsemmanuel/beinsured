@@ -10,7 +10,7 @@ function isInFinderPattern(row, col, size) {
 }
 
 export function QRCode({
-  value = "https://wa.me/233000000000?text=Hi%20BeInsured",
+  value = "https://wa.me/233531100408?text=Hi%20BeInsured",
   size = 268,
   fgColor = "#0F172A",
   bgColor = "#FFFFFF",
