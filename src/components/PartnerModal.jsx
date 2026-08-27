@@ -1,9 +1,20 @@
 import React from 'react';
-import { X, ShieldCheck, Building2, CheckCircle2, PhoneCall, ExternalLink, ArrowRight } from 'lucide-react';
-import PillButton from './PillButton';
+import { X, ShieldCheck, Car, BadgeCheck, CheckCircle2, ArrowRight, Smartphone } from 'lucide-react';
 
 export default function PartnerModal({ isOpen, partner, onClose, onOpenChannelSelector }) {
   if (!isOpen || !partner) return null;
+
+  // Dedicated Insurance Icon mapping
+  const getPartnerIcon = () => {
+    if (partner.id === 'nic' || partner.id === 'gia') {
+      return <BadgeCheck className="w-6 h-6 text-[#0F172A]" />;
+    }
+    if (partner.id === 'momo' || partner.id === 'telecel' || partner.id === 'at') {
+      return <Smartphone className="w-6 h-6 text-[#0F172A]" />;
+    }
+    // Motor Underwriters (Enterprise, Star, GLICO, etc.)
+    return <ShieldCheck className="w-6 h-6 text-[#0F172A]" />;
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-200">
@@ -15,11 +26,11 @@ export default function PartnerModal({ isOpen, partner, onClose, onOpenChannelSe
         <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-[#F9F8F3]">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-2xl bg-[#FEBD19] text-[#0F172A] flex items-center justify-center font-bold text-lg shadow-sm">
-              <Building2 className="w-6 h-6" />
+              {getPartnerIcon()}
             </div>
             <div>
-              <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#0F172A]">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <div className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#0F172A]">
+                <ShieldCheck className="w-3 h-3 text-emerald-600" />
                 <span>{partner.status || 'Active Underwriting Partner'}</span>
               </div>
               <h3 className="text-xl font-extrabold text-[#0F172A]">{partner.name}</h3>
