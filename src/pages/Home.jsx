@@ -6,6 +6,7 @@ import LegitimacyBanner from '../components/LegitimacyBanner';
 import AnimatedTextCycle from '../components/AnimatedTextCycle';
 import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
+import PhoneCarousel from '../components/PhoneCarousel';
 import { ChannelBadgeGroup } from '../components/ChannelLogos';
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 
@@ -29,7 +30,24 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
       {/* 2. LEGITIMACY & VERIFICATION BANNER */}
       <LegitimacyBanner onOpenChannelSelector={onOpenChannelSelector} />
 
-      {/* 3. ABOUT US / PURPOSE STATEMENT */}
+      {/* 3. MOBILE APP & CHANNEL SHOWCASE */}
+      <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <SectionTag text="Mobile-Native Insurance" className="justify-center" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Designed to fit directly in your pocket
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
+            See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
+          <PhoneCarousel />
+        </div>
+      </section>
+
+      {/* 4. ABOUT US / PURPOSE STATEMENT */}
       <section id="about" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <SectionTag text="About Us" />
 
@@ -74,7 +92,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 4. COVERAGE OPTIONS */}
+      {/* 5. COVERAGE OPTIONS */}
       <section id="coverage" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <SectionTag text="Car Cover Options" />
@@ -127,7 +145,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 5. HOW IT WORKS */}
+      {/* 6. HOW IT WORKS */}
       <section id="how-it-works" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <SectionTag text="How It Works" />
@@ -144,7 +162,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         <PinnedHowItWorks className="pt-4" />
       </section>
 
-      {/* 6. CLAIMS GUIDANCE SECTION */}
+      {/* 7. CLAIMS GUIDANCE SECTION */}
       <section id="claims" className="px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="card-cream p-8 sm:p-12 space-y-8">
           
@@ -184,7 +202,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 7. PARTNERS & UNDERWRITERS BANNER */}
+      {/* 8. PARTNERS & UNDERWRITERS BANNER */}
       <section id="partners" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <SectionTag text="Partners & Insurers" />
@@ -210,7 +228,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </div>
       </section>
 
-      {/* 8. CTA SECTION WITH ANIMATED TEXT CYCLE */}
+      {/* 9. CTA SECTION WITH ANIMATED TEXT CYCLE */}
       <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3">

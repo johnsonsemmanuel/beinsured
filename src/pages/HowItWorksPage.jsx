@@ -3,6 +3,7 @@ import SectionTag from '../components/SectionTag';
 import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import LegitimacyBanner from '../components/LegitimacyBanner';
 import PillButton from '../components/PillButton';
+import PhoneCarousel from '../components/PhoneCarousel';
 
 export default function HowItWorksPage({ onOpenChannelSelector }) {
   return (
@@ -22,10 +23,27 @@ export default function HowItWorksPage({ onOpenChannelSelector }) {
       <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
         <PinnedHowItWorks className="pt-4" />
 
-        <div className="text-center pt-8">
+        <div className="text-center pt-4 pb-8">
           <PillButton variant="gold" onClick={onOpenChannelSelector}>
             Try It Now (*170# or WhatsApp)
           </PillButton>
+        </div>
+      </section>
+
+      {/* Interactive Phone Screen Showcase */}
+      <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <SectionTag text="Live Mobile Interface" className="justify-center" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+            See the mobile handset experience
+          </h2>
+          <p className="text-slate-600 text-sm font-medium">
+            Preview what your phone screen looks like when dialing *170# or chatting with our WhatsApp bot.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
+          <PhoneCarousel />
         </div>
       </section>
 
