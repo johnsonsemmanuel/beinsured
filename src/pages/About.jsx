@@ -3,6 +3,7 @@ import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LegitimacyBanner from '../components/LegitimacyBanner';
 import { ShieldCheck, Users, Smartphone } from 'lucide-react';
+import { ChannelBadgeGroup } from '../components/ChannelLogos';
 
 export default function About({ onOpenChannelSelector }) {
   return (
@@ -37,14 +38,14 @@ export default function About({ onOpenChannelSelector }) {
               Our car insurance plans are designed to be easy to understand and simple to manage directly on your mobile handset. We partner with licensed underwriters to give you instant, legitimate coverage.
             </p>
             
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 space-y-2 shadow-sm">
-              <div className="font-bold text-xs uppercase tracking-wider text-brand-dark flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#FEBD19]" />
-                <span>Built for Ghana Drivers</span>
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 space-y-3 shadow-sm">
+              <div className="font-bold text-xs uppercase tracking-wider text-brand-dark border-b border-slate-100 pb-2">
+                Built for Ghana Drivers Across 3 Channels
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Enter your vehicle registration number on USSD *170# or WhatsApp, pay via MoMo, and receive your digital insurance verification immediately.
               </p>
+              <ChannelBadgeGroup className="pt-1" />
             </div>
 
             <PillButton variant="gold" onClick={onOpenChannelSelector}>

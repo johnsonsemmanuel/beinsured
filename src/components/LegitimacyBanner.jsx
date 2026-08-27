@@ -2,13 +2,14 @@ import React from 'react';
 import SectionTag from './SectionTag';
 import PillButton from './PillButton';
 import { ShieldCheck, ArrowRight, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { USSDIcon, WhatsAppIcon, MoMoIcon } from './ChannelLogos';
 
 export default function LegitimacyBanner({ onOpenChannelSelector }) {
   return (
     <section className="px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-card space-y-8">
         
-        {/* Header Tag - Underline Badge Design ONLY */}
+        {/* Header Tag */}
         <div className="space-y-3">
           <SectionTag text="Official Brand & Legitimacy Portal" />
           <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-dark tracking-tight leading-tight max-w-3xl">
@@ -19,37 +20,43 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
           </p>
         </div>
 
-        {/* Verification Cards */}
+        {/* Verification Cards with Official Channel Icons */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
           
-          {/* Card 1: Gold Card Theme */}
+          {/* Card 1: USSD */}
           <div className="card-gold space-y-4">
-            <div className="w-10 h-10 rounded-2xl bg-brand-dark text-white flex items-center justify-center">
-              <ShieldCheck className="w-6 h-6 text-brand-gold" />
+            <div className="w-10 h-10 rounded-2xl bg-brand-dark text-[#FEBD19] flex items-center justify-center">
+              <USSDIcon className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-brand-dark">USSD Official Shortcode</h3>
+            <h3 className="text-lg font-bold text-brand-dark flex items-center gap-2">
+              <span>USSD Official Shortcode</span>
+            </h3>
             <p className="text-xs text-brand-dark/90 leading-relaxed font-medium">
               Dial <strong className="text-brand-dark font-extrabold">*170#</strong> directly on your mobile device. Confirm the menu prompt states "BeINsured Motor Cover".
             </p>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 2: WhatsApp */}
           <div className="card-cream space-y-4">
-            <div className="w-10 h-10 rounded-2xl bg-brand-gold text-brand-dark flex items-center justify-center font-extrabold text-sm">
-              WA
+            <div className="w-10 h-10 rounded-2xl bg-emerald-600 text-white flex items-center justify-center">
+              <WhatsAppIcon className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">WhatsApp Verified Bot</h3>
+            <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span>WhatsApp Verified Bot</span>
+            </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Verify the green checkmark on our WhatsApp business profile before submitting vehicle registration details or payment.
+              Verify the official BeInsured number (+233 53 110 0408) on our WhatsApp business profile before submitting vehicle registration details or payment.
             </p>
           </div>
 
-          {/* Card 3 */}
+          {/* Card 3: MTN MoMo */}
           <div className="card-cream space-y-4">
-            <div className="w-10 h-10 rounded-2xl bg-brand-gold text-brand-dark flex items-center justify-center font-extrabold text-sm">
-              MoMo
+            <div className="w-10 h-10 rounded-2xl bg-[#FFC800] text-slate-900 flex items-center justify-center p-1.5">
+              <MoMoIcon className="w-7 h-7 object-contain" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">MTN MoMo Marketplace</h3>
+            <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span>MTN MoMo Marketplace</span>
+            </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               Access BeINsured directly inside the official MTN MoMo App under Financial Services - Micro Insurance.
             </p>
