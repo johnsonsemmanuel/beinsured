@@ -7,33 +7,30 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
   const slides = [
     {
       id: 1,
-      badge: "Instant Motor Insurance in Ghana",
+      badge: "Manage your car cover in one simple place",
       title: "Your car insurance made for",
       animatedWords: ["real life", "busy drivers", "instant cover", "peace of mind"],
-      desc: "Get car coverage that supports your daily driving from Third-Party essentials to unexpected road accidents. Simple micro-plans, clear costs, and instant claims on *170# or WhatsApp.",
+      desc: "Get car coverage that supports your daily driving from Third-Party essentials to unexpected road accidents. Simple micro-plans, clear costs, and instant claims.",
       image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=80",
-      cta: "Get Car Cover",
-      offerHighlight: "Special Offer: Pay weekly or monthly via MTN MoMo"
+      cta: "Get Car Cover"
     },
     {
       id: 2,
-      badge: "Third-Party Essentials",
+      badge: "Third-Party & Comprehensive Road Cover",
       title: "Compulsory road cover for",
       animatedWords: ["private cars", "commercial taxis", "delivery vans", "fleet vehicles"],
       desc: "Save on legally required road coverage against third-party bodily injury, property damage, and legal liabilities without paperwork or delays.",
       image: "/hero-slide-1.jpg",
-      cta: "Explore Third-Party Cover",
-      offerHighlight: "Instant digital sticker via SMS upon payment"
+      cta: "Explore Cover Options"
     },
     {
       id: 3,
-      badge: "WhatsApp Claims & Fast Settlement",
+      badge: "WhatsApp Claims & Fast MoMo Payouts",
       title: "File vehicle claims via",
       animatedWords: ["WhatsApp bot", "photo uploads", "direct MoMo", "24/7 support"],
       desc: "Had a collision or vehicle damage? Snap photos, upload on WhatsApp, and receive approved claim payouts directly into your Mobile Money wallet.",
       image: "/hero-slide-2.jpg",
-      cta: "File a Claim Now",
-      offerHighlight: "Paperless claims processed under licensed underwriters"
+      cta: "File a Claim Now"
     }
   ];
 
@@ -69,9 +66,9 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
           </div>
         ))}
 
-        {/* Top Header Badge */}
+        {/* Top Header Badge - Original Underlined Design */}
         <div className="relative z-10 flex items-center justify-between gap-4">
-          <div className="inline-block border-b-2 border-[#FEBD19] pb-0.5 text-xs font-extrabold uppercase tracking-wider text-white bg-slate-950/70 backdrop-blur-md px-3.5 py-1 rounded-full">
+          <div className="inline-block border-b-2 border-[#FEBD19] pb-0.5 text-xs font-extrabold uppercase tracking-wider text-white bg-slate-950/70 backdrop-blur-md px-3.5 py-1">
             {slide.badge}
           </div>
 
@@ -98,11 +95,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
         </div>
 
         {/* Dynamic Center Slide Content */}
-        <div className="relative z-10 max-w-3xl space-y-6 my-auto pt-8 pb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FEBD19]/20 border border-[#FEBD19]/40 text-[#FEBD19] text-xs font-bold">
-            <span>✨ {slide.offerHighlight}</span>
-          </div>
-
+        <div className="relative z-10 max-w-3xl space-y-6 my-auto pt-10 pb-8">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             {slide.title}{" "}
             <AnimatedTextCycle 
