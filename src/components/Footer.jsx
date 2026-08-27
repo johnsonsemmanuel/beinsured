@@ -1,15 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PillButton from './PillButton';
+import { Instagram, Facebook } from 'lucide-react';
+
+// Custom SVG icon for TikTok
+function TikTokIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.33 22a6.33 6.33 0 0 0 6.33-6.33V9.58a8.28 8.28 0 0 0 3.93 1.05V7.18a4.87 4.87 0 0 1-.07-.49z" />
+    </svg>
+  );
+}
 
 export default function Footer({ onOpenChannelSelector }) {
   return (
     <footer className="relative bg-white border-t border-slate-200/80 pt-16 pb-12 px-4 sm:px-8 overflow-hidden">
-      {/* Subtle Background Car Image Overlay */}
+      {/* Subtle Background Overlay */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-5">
         <img 
           src="/footer-ghana-traffic.jpg" 
           alt="Cars on road in Ghana" 
+          loading="lazy"
           className="w-full h-full object-cover object-center filter grayscale"
         />
       </div>
@@ -19,7 +30,7 @@ export default function Footer({ onOpenChannelSelector }) {
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-100">
           
-          {/* Brand Col */}
+          {/* Brand Col & Social Media */}
           <div className="md:col-span-1 space-y-4">
             <Link to="/" className="inline-block" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
@@ -31,6 +42,41 @@ export default function Footer({ onOpenChannelSelector }) {
             <p className="text-xs text-slate-600 leading-relaxed">
               Simple, instant, and transparent micro car insurance for vehicle owners and drivers across Ghana. Distributed via USSD (*170#), WhatsApp, and MTN MoMo.
             </p>
+            
+            {/* Social Media Buttons */}
+            <div className="pt-1 space-y-2">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Connect With Us</div>
+              <div className="flex items-center gap-3">
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://tiktok.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#FEBD19] hover:text-slate-900 transition-colors shadow-sm"
+                  aria-label="TikTok"
+                >
+                  <TikTokIcon className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
             <div className="pt-2">
               <PillButton variant="gold" onClick={onOpenChannelSelector} className="text-xs">
                 Get Car Cover
@@ -82,7 +128,7 @@ export default function Footer({ onOpenChannelSelector }) {
                 USSD Code: <strong className="text-slate-900">*170#</strong>
               </li>
               <li className="hover:text-[#FEBD19] transition-colors cursor-pointer" onClick={onOpenChannelSelector}>
-                WhatsApp Bot (+233 53 110 0408)
+                WhatsApp Verified Bot
               </li>
               <li className="hover:text-[#FEBD19] transition-colors cursor-pointer" onClick={onOpenChannelSelector}>
                 MTN MoMo App Marketplace

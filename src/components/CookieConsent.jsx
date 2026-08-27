@@ -37,15 +37,15 @@ export default function CookieConsent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 pointer-events-auto"
+            className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 pointer-events-auto flex items-center justify-center"
           >
             <button
               onClick={handleOpen}
-              className="flex items-center gap-2 px-3.5 py-1.5 bg-white/90 backdrop-blur-md border border-slate-200 shadow-lg rounded-full text-xs font-bold text-slate-800 hover:text-brand-dark hover:bg-white hover:border-[#FEBD19] transition-all group cursor-pointer"
+              className="flex items-center justify-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xl rounded-full text-xs font-bold text-slate-800 hover:text-brand-dark hover:bg-white hover:border-[#FEBD19] transition-all group cursor-pointer"
             >
-              <Cookie className="w-3.5 h-3.5 text-[#FEBD19] group-hover:rotate-12 transition-transform" />
+              <Cookie className="w-4 h-4 text-[#FEBD19] group-hover:rotate-12 transition-transform" />
               <span>Cookie Policy</span>
-              {hasConsented && <Check className="w-3 h-3 text-emerald-600 ml-0.5" />}
+              {hasConsented && <Check className="w-3.5 h-3.5 text-[#FEBD19] ml-0.5" />}
             </button>
           </motion.div>
         )}
@@ -87,8 +87,8 @@ export default function CookieConsent() {
               </p>
 
               <div className="flex items-center justify-between gap-3 pt-1 border-t border-slate-800">
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-400">
-                  <ShieldCheck className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#FEBD19]">
+                  <ShieldCheck className="w-4 h-4 text-[#FEBD19]" />
                   <span>NIC Compliant</span>
                 </div>
 
