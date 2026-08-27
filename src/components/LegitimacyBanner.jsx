@@ -11,10 +11,10 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
         {/* Header Tag */}
         <div className="space-y-3">
           <SectionTag text="Official Brand & Legitimacy Portal" />
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-dark tracking-tight leading-tight max-w-3xl">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-brand-dark tracking-tight leading-snug max-w-3xl">
             Verify official BeINsured channels before transacting
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-medium max-w-2xl leading-relaxed">
+          <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl leading-relaxed">
             BeINsured does not collect funds on this website. All car insurance premium payments and policy issuance take place strictly on USSD (*170#), WhatsApp, and MTN MoMo rails under licensed insurance partner underwriting.
           </p>
         </div>
