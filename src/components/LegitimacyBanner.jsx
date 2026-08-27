@@ -1,8 +1,7 @@
 import React from 'react';
 import SectionTag from './SectionTag';
 import PillButton from './PillButton';
-import { ShieldCheck, ArrowRight, ExternalLink, CheckCircle2 } from 'lucide-react';
-import { USSDIcon, WhatsAppIcon, MoMoIcon } from './ChannelLogos';
+import { ShieldCheck, Smartphone, MessageSquare, Wallet } from 'lucide-react';
 
 export default function LegitimacyBanner({ onOpenChannelSelector }) {
   return (
@@ -20,13 +19,13 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
           </p>
         </div>
 
-        {/* Verification Cards with Official Channel Icons */}
+        {/* Verification Cards with Lucide System Icons */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
           
           {/* Card 1: USSD */}
           <div className="card-gold space-y-4">
             <div className="w-10 h-10 rounded-2xl bg-brand-dark text-[#FEBD19] flex items-center justify-center">
-              <USSDIcon className="w-5 h-5" />
+              <Smartphone className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-brand-dark flex items-center gap-2">
               <span>USSD Official Shortcode</span>
@@ -39,7 +38,7 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
           {/* Card 2: WhatsApp */}
           <div className="card-cream space-y-4">
             <div className="w-10 h-10 rounded-2xl bg-emerald-600 text-white flex items-center justify-center">
-              <WhatsAppIcon className="w-5 h-5" />
+              <MessageSquare className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span>WhatsApp Verified Bot</span>
@@ -51,8 +50,8 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
 
           {/* Card 3: MTN MoMo */}
           <div className="card-cream space-y-4">
-            <div className="w-10 h-10 rounded-2xl bg-[#FFC800] text-slate-900 flex items-center justify-center p-1.5">
-              <MoMoIcon className="w-7 h-7 object-contain" />
+            <div className="w-10 h-10 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center">
+              <Wallet className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span>MTN MoMo Marketplace</span>
