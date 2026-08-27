@@ -45,7 +45,7 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
               <span>WhatsApp Verified Bot</span>
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Verify the official BeInsured number (+233 53 110 0408) on our WhatsApp business profile before submitting vehicle registration details or payment.
+              Verify the official BeInsured channel on our WhatsApp business profile before submitting vehicle registration details or payment.
             </p>
           </div>
 

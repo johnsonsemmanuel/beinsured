@@ -11,7 +11,7 @@ export default function Claims({ onOpenChannelSelector }) {
       icon: Camera,
       bg: "bg-amber-100 text-amber-800",
       title: "1. Snap Photos on Scene",
-      desc: "Capture clear photos of vehicle damage, your driver's license, and registration details, then upload directly to our WhatsApp bot (+233 53 110 0408)."
+      desc: "Capture clear photos of vehicle damage, your driver's license, and registration details, then upload directly to our WhatsApp bot."
     },
     {
       icon: ShieldCheck,

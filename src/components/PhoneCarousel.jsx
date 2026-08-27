@@ -19,7 +19,7 @@ export default function PhoneCarousel({ images, className = "" }) {
       src: whatsappImg,
       alt: "WhatsApp Bot Insurance Chat Screen",
       title: "WhatsApp 24/7 Auto Bot",
-      subtitle: "Chat with our verified WhatsApp bot (+233 53 110 0408) for photo claims, registration, and sticker verification.",
+      subtitle: "Chat with our verified WhatsApp bot for photo claims, instant registration, and digital sticker verification.",
       tag: "WhatsApp Verified Bot"
     },
     {
@@ -46,16 +46,23 @@ export default function PhoneCarousel({ images, className = "" }) {
   return (
     <div className={`flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 ${className}`}>
       
-      {/* Phone Mockup Frame */}
-      <div className="relative w-[280px] sm:w-[310px] h-[560px] sm:h-[600px] bg-slate-900 rounded-[50px] p-3.5 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.4)] border-4 border-slate-800 shrink-0">
+      {/* iPhone 15 Pro Max Titanium Mockup Frame */}
+      <div className="relative w-[285px] sm:w-[315px] h-[580px] sm:h-[620px] bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 rounded-[52px] p-2 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.45)] border-2 border-slate-700/80 ring-1 ring-slate-600/30 shrink-0">
         
-        {/* Phone Speaker / Dynamic Island */}
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-950 rounded-full z-30 flex items-center justify-end px-3">
-          <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+        {/* Sleek iPhone 15 Pro Titanium Edge Accents */}
+        <div className="absolute top-24 -left-1 w-1 h-7 bg-slate-700/60 rounded-l-md" /> {/* Action Button */}
+        <div className="absolute top-36 -left-1 w-1 h-12 bg-slate-700/60 rounded-l-md" /> {/* Volume Up */}
+        <div className="absolute top-52 -left-1 w-1 h-12 bg-slate-700/60 rounded-l-md" /> {/* Volume Down */}
+        <div className="absolute top-40 -right-1 w-1 h-16 bg-slate-700/60 rounded-r-md" /> {/* Power Button */}
+
+        {/* Dynamic Island Notch */}
+        <div className="absolute top-4.5 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-40 flex items-center justify-between px-2.5 shadow-md">
+          <div className="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800" />
+          <div className="w-2 h-2 rounded-full bg-blue-950/80 border border-blue-900/60" />
         </div>
 
-        {/* Inner Phone Screen Container */}
-        <div className="relative w-full h-full bg-slate-950 rounded-[38px] overflow-hidden pt-8 pb-4 border border-slate-800/80">
+        {/* Edge-to-Edge Screen Display (Top to Down, Zero Bezels Padding) */}
+        <div className="relative w-full h-full bg-black rounded-[44px] overflow-hidden border border-slate-900/50">
           
           <AnimatePresence mode="wait">
             <motion.div
@@ -78,9 +85,10 @@ export default function PhoneCarousel({ images, className = "" }) {
             </motion.div>
           </AnimatePresence>
 
-          {/* Bottom Phone Home Indicator Bar */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-400/40 rounded-full z-30 pointer-events-none" />
+          {/* iPhone Home Indicator Bar */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/70 backdrop-blur-md rounded-full z-40 pointer-events-none drop-shadow-sm" />
         </div>
+
       </div>
 
       {/* Slide Description & Controls */}

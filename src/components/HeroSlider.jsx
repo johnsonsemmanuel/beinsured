@@ -141,7 +141,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
 
           <div className="flex flex-wrap items-center gap-6 text-xs text-white/90 font-semibold">
             <span>Instant Cover on USSD <strong className="text-[#FEBD19]">*170#</strong></span>
-            <span>WhatsApp Bot (+233 53 110 0408)</span>
+            <span>WhatsApp Bot</span>
             <span>MTN MoMo Integrated</span>
           </div>
         </div>

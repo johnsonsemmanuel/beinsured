@@ -181,7 +181,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
             <div className="space-y-2">
               <div className="font-bold text-sm text-slate-900">Step 1: Snap Photos</div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Take photos of the vehicle damage or collision scene and send them directly to our WhatsApp bot (+233 53 110 0408).
+                Take photos of the vehicle damage or collision scene and send them directly to our WhatsApp bot.
               </p>
             </div>
             <div className="space-y-2">
