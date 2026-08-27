@@ -42,11 +42,10 @@ export default function CookieConsent() {
             >
               <button
                 onClick={handleOpen}
-                className="flex items-center justify-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xl rounded-full text-xs font-bold text-slate-800 hover:text-brand-dark hover:bg-white hover:border-[#FEBD19] transition-all group cursor-pointer"
+                className="p-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xl rounded-full text-slate-700 hover:bg-white hover:border-[#FEBD19] transition-all group cursor-pointer"
+                aria-label="Cookie Policy"
               >
                 <Cookie className="w-4 h-4 text-[#FEBD19] group-hover:rotate-12 transition-transform" />
-                <span>Cookie Policy</span>
-                {hasConsented && <Check className="w-3.5 h-3.5 text-[#FEBD19] ml-0.5" />}
               </button>
             </motion.div>
           </div>
