@@ -17,7 +17,7 @@ export default function Header({ onOpenChannelSelector }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-slate-200/60 py-3.5 px-4 sm:px-8 transition-all">
+    <header className="sticky top-0 z-40 bg-brand-cream/70 backdrop-blur-md border-b border-slate-200/50 py-3.5 px-4 sm:px-8 transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Official Brand Logo */}
