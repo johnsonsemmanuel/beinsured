@@ -3,6 +3,7 @@ import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LegitimacyBanner from '../components/LegitimacyBanner';
 import { Shield, Car, AlertTriangle, CheckCircle, HelpCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Coverage({ onOpenChannelSelector }) {
   const plans = [
@@ -59,17 +60,22 @@ export default function Coverage({ onOpenChannelSelector }) {
         </div>
       </section>
 
-      {/* Plans Grid */}
+      {/* Plans Grid with Motion Cards */}
       <section className="px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
-            <div 
+            <motion.div 
               key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              whileHover={{ y: -6, scale: 1.01 }}
               className={`p-8 rounded-3xl border flex flex-col justify-between space-y-6 ${
                 plan.recommended 
                   ? 'bg-brand-dark text-white border-brand-gold ring-2 ring-brand-gold/30 shadow-xl' 
-                  : 'bg-white text-slate-800 border-slate-200 shadow-sm hover:border-[#FEBD19]'
-              } transition-all duration-300`}
+                  : 'bg-white text-slate-800 border-slate-200 shadow-sm hover:border-[#FEBD19] hover:shadow-md'
+              } transition-colors duration-300`}
             >
               <div className="space-y-4">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold ${
@@ -99,7 +105,7 @@ export default function Coverage({ onOpenChannelSelector }) {
               >
                 Get {plan.title.split(' ')[0]} Cover
               </PillButton>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

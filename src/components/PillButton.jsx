@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function PillButton({
   children,
@@ -10,10 +11,8 @@ export default function PillButton({
   icon = true,
   type = 'button'
 }) {
-  const baseStyles = "group inline-flex items-center gap-3 font-extrabold text-sm px-6 py-3 rounded-full transition-all duration-300 cursor-pointer select-none shadow-md hover:shadow-lg";
+  const baseStyles = "group inline-flex items-center gap-3 font-extrabold text-sm px-6 py-3 rounded-full transition-colors duration-300 cursor-pointer select-none shadow-md hover:shadow-lg";
 
-  // Enforcing explicit hex colors:
-  // ALL hovers showcase Gold (#FEBD19) highlights without any blue!
   const variantStyles = {
     gold: "bg-[#FEBD19] text-[#0F172A] border border-[#FEBD19] hover:bg-[#0F172A] hover:text-[#FEBD19] hover:border-[#0F172A]",
     white: "bg-white text-[#0F172A] border border-slate-300 shadow-sm hover:bg-[#FEBD19] hover:text-[#0F172A] hover:border-[#FEBD19]",
@@ -41,15 +40,28 @@ export default function PillButton({
 
   if (href) {
     return (
-      <a href={href} className={`${baseStyles} ${variantStyles[variant] || variantStyles.gold} ${className}`}>
+      <motion.a 
+        href={href} 
+        whileHover={{ scale: 1.025 }}
+        whileTap={{ scale: 0.96 }}
+        transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        className={`${baseStyles} ${variantStyles[variant] || variantStyles.gold} ${className}`}
+      >
         {Content}
-      </a>
+      </motion.a>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} className={`${baseStyles} ${variantStyles[variant] || variantStyles.gold} ${className}`}>
+    <motion.button 
+      type={type} 
+      onClick={onClick} 
+      whileHover={{ scale: 1.025 }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+      className={`${baseStyles} ${variantStyles[variant] || variantStyles.gold} ${className}`}
+    >
       {Content}
-    </button>
+    </motion.button>
   );
 }

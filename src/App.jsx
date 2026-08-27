@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ChannelSelector from './components/ChannelSelector';
 import PolicyLookupModal from './components/PolicyLookupModal';
+import { PageTransition } from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
 import Coverage from './pages/Coverage';
@@ -11,72 +13,108 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import Claims from './pages/Claims';
 import Partners from './pages/Partners';
 
+// Scroll to top automatically on route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+  return null;
+}
+
+// Animated Routes Wrapper
+function AnimatedRoutes({ onOpenChannelSelector, onOpenPolicyLookup }) {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route 
+          path="/" 
+          element={
+            <PageTransition>
+              <Home 
+                onOpenChannelSelector={onOpenChannelSelector}
+                onOpenPolicyLookup={onOpenPolicyLookup}
+              />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/about" 
+          element={
+            <PageTransition>
+              <About 
+                onOpenChannelSelector={onOpenChannelSelector}
+              />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/coverage" 
+          element={
+            <PageTransition>
+              <Coverage 
+                onOpenChannelSelector={onOpenChannelSelector}
+              />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/how-it-works" 
+          element={
+            <PageTransition>
+              <HowItWorksPage 
+                onOpenChannelSelector={onOpenChannelSelector}
+              />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/claims" 
+          element={
+            <PageTransition>
+              <Claims 
+                onOpenChannelSelector={onOpenChannelSelector}
+              />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/partners" 
+          element={
+            <PageTransition>
+              <Partners 
+                onOpenChannelSelector={onOpenChannelSelector}
+              />
+            </PageTransition>
+          } 
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   const [channelSelectorOpen, setChannelSelectorOpen] = useState(false);
   const [policyLookupOpen, setPolicyLookupOpen] = useState(false);
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900">
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900 overflow-x-hidden">
         
         {/* Header Navigation */}
         <Header 
           onOpenChannelSelector={() => setChannelSelectorOpen(true)}
         />
 
-        {/* Main Page View with React Router */}
+        {/* Main Page View with Animated Routes */}
         <main className="flex-1">
-          <Routes>
-            <Route 
-              path="/" 
-              element={
-                <Home 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                  onOpenPolicyLookup={() => setPolicyLookupOpen(true)}
-                />
-              } 
-            />
-            <Route 
-              path="/about" 
-              element={
-                <About 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                />
-              } 
-            />
-            <Route 
-              path="/coverage" 
-              element={
-                <Coverage 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                />
-              } 
-            />
-            <Route 
-              path="/how-it-works" 
-              element={
-                <HowItWorksPage 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                />
-              } 
-            />
-            <Route 
-              path="/claims" 
-              element={
-                <Claims 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                />
-              } 
-            />
-            <Route 
-              path="/partners" 
-              element={
-                <Partners 
-                  onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-                />
-              } 
-            />
-          </Routes>
+          <AnimatedRoutes 
+            onOpenChannelSelector={() => setChannelSelectorOpen(true)}
+            onOpenPolicyLookup={() => setPolicyLookupOpen(true)}
+          />
         </main>
 
         {/* Footer */}
@@ -92,7 +130,7 @@ export default function App() {
 
         <PolicyLookupModal 
           isOpen={policyLookupOpen}
-          onClose={() => setPolicyLookupOpen(false)}
+          onClose={() => setChannelSelectorOpen(false)}
           onOpenChannelSelector={() => setChannelSelectorOpen(true)}
         />
 
