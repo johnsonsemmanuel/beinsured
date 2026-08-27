@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ChannelSelector from './components/ChannelSelector';
 import PolicyLookupModal from './components/PolicyLookupModal';
+import TopSubtleHeroBackground from './components/TopSubtleHeroBackground';
 import { PageTransition } from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -102,15 +103,18 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900 overflow-x-hidden">
+      <div className="relative min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900 overflow-x-hidden">
         
+        {/* Subtle Top Hero Background Image Layer */}
+        <TopSubtleHeroBackground />
+
         {/* Header Navigation */}
         <Header 
           onOpenChannelSelector={() => setChannelSelectorOpen(true)}
         />
 
         {/* Main Page View with Animated Routes */}
-        <main className="flex-1">
+        <main className="flex-1 z-10">
           <AnimatedRoutes 
             onOpenChannelSelector={() => setChannelSelectorOpen(true)}
             onOpenPolicyLookup={() => setPolicyLookupOpen(true)}
@@ -130,7 +134,7 @@ export default function App() {
 
         <PolicyLookupModal 
           isOpen={policyLookupOpen}
-          onClose={() => setChannelSelectorOpen(false)}
+          onClose={() => setPolicyLookupOpen(false)}
           onOpenChannelSelector={() => setChannelSelectorOpen(true)}
         />
 
