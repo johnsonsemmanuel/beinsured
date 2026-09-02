@@ -15,7 +15,7 @@ export default function LegitimacyBanner({ onOpenChannelSelector }) {
             Verify official BeINsured channels before transacting
           </h2>
           <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl leading-relaxed">
-            BeINsured does not collect funds on this website. All car insurance premium payments and policy issuance take place strictly on USSD (*170#), WhatsApp, and MTN MoMo rails under licensed insurance partner underwriting.
+            BeINsured does not collect funds on this website. All car insurance premium payments and policy issuance take place strictly on USSD (*170#), WhatsApp and MTN MoMo rails under licensed insurance partner underwriting.
           </p>
         </div>
 

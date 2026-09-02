@@ -7,7 +7,7 @@ import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
 import PhoneCarousel from '../components/PhoneCarousel';
 import ScrollReveal from '../components/ScrollReveal';
-
+import BrandVideoPlayer from '../components/BrandVideoPlayer';
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
@@ -26,17 +26,17 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         onOpenPolicyLookup={onOpenPolicyLookup}
       />
 
-      {/* 2. ABOUT US / PURPOSE STATEMENT */}
+      {/* 2. INSURING YOUR CAR SHOULDN'T FEEL STRESSFUL */}
       <ScrollReveal>
         <section id="about" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
           <SectionTag text="About Us" />
 
           <div className="max-w-3xl space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight leading-snug">
-              Insuring your car shouldn’t feel overwhelming.
+              Insuring your car shouldn't feel stressful
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
-              We focus on making motor insurance clear, simple, and built around real driver needs so you can feel confident about the protection you choose.
+              Skip the long queues and lengthy paperwork. Do what takes you hours in minutes when you buy car insurance on BeINsured.
             </p>
           </div>
 
@@ -57,43 +57,72 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
 
             <div className="space-y-4">
               <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                Our plans are designed to be easy to understand and simple to manage on your phone. Whether you need compulsory Third-Party protection or comprehensive protection, we deliver instant digital policy verification.
+                Getting your motor insured should be a straightforward process. BeINsured brings Ghana's top insurance companies together in one marketplace, making it easier to find the right protection for your vehicle.
               </p>
-              <div className="pt-1 flex items-center gap-4">
-                <Link 
-                  to="/about"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-dark hover:text-[#FEBD19] underline underline-offset-4 cursor-pointer"
-                >
-                  <span>Read Full About Story</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                With BeINsured, you can access and manage your motor insurance from your phone, giving you greater flexibility throughout the process.
+              </p>
+              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                From choosing your cover to completing your purchase, BeINsured gives you a more convenient way to get insured.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* 3. YOUR INSURANCE RIGHT AT YOUR FINGERTIPS */}
+      <ScrollReveal delay={0.1}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
+          <div className="max-w-3xl space-y-2">
+            <SectionTag text="Mobile-Native Insurance" />
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight leading-snug">
+              Your insurance, right at your fingertips
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+              BeINsured puts motor insurance within easy reach. Access insurance options, compare policies, make payments and manage your cover directly from your phone.
+            </p>
+            <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+              Everything you need to manage your motor insurance, right from your phone.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* 4. CHANNELS */}
+      <ScrollReveal delay={0.1}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card-cream p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-3">
+                <div className="font-bold text-xs uppercase tracking-wider text-brand-dark">USSD *170# Shortcode Channel</div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  For MTN users only, buy motor insurance directly from your phone by dialling *170#.
+                </p>
+              </div>
+            </div>
+
+            <div className="card-cream p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-3">
+                <div className="font-bold text-xs uppercase tracking-wider text-brand-dark">WhatsApp Auto Bot</div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Start a conversation on WhatsApp and purchase your motor insurance through our 24/7 Auto Bot.
+                </p>
+              </div>
+            </div>
+
+            <div className="card-cream p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-3">
+                <div className="font-bold text-xs uppercase tracking-wider text-brand-dark">MTN MoMo Marketplace</div>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Find BeINsured on the MTN MoMo Marketplace and purchase motor insurance directly through the app.
+                </p>
               </div>
             </div>
           </div>
         </section>
       </ScrollReveal>
 
-      {/* 3. MOBILE APP & CHANNEL SHOWCASE */}
-      <ScrollReveal delay={0.15}>
-        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <SectionTag text="Mobile-Native Insurance" className="justify-center" />
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-              Designed to fit directly in your pocket
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base font-medium">
-              See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
-            <PhoneCarousel />
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* 4. HOW IT WORKS */}
+      {/* 5. HOW IT WORKS */}
       <ScrollReveal delay={0.1}>
         <section id="how-it-works" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
           <div className="flex items-center justify-between">
@@ -112,56 +141,97 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </section>
       </ScrollReveal>
 
-      {/* 5. CTA SECTION WITH ANIMATED TEXT CYCLE */}
+      {/* 6. MOBILE APP & CHANNEL SHOWCASE */}
+      <ScrollReveal delay={0.15}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <SectionTag text="Mobile-Native Insurance" className="justify-center" />
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Designed to fit directly in your pocket
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base font-medium">
+              See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp and Mobile Money.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
+            <PhoneCarousel />
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* 7. GHANA'S TOP INSURANCE COMPANIES */}
+      <ScrollReveal delay={0.1}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <SectionTag text="Our Partners" className="justify-center" />
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Ghana's Top Insurance Companies on BeINsured
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              'Donewell Assurance',
+              'Vanguard Assurance',
+              'Hollard Ghana',
+              'Glico General',
+              'Star Assurance',
+              'Enterprise Insurance'
+            ].map((name, i) => (
+              <div key={i} className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm flex items-center justify-center text-center hover:border-[#FEBD19] hover:shadow-md transition-all duration-300">
+                <span className="text-xs sm:text-sm font-bold text-slate-700">{name}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center pt-2">
+            <Link 
+              to="/partners"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-dark hover:text-[#FEBD19] underline underline-offset-4 cursor-pointer"
+            >
+              <span>View All Partners</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* 8. BRAND FILM */}
+      <ScrollReveal delay={0.1}>
+        <section className="px-4 sm:px-8 max-w-5xl mx-auto space-y-5">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <SectionTag text="Brand Film" className="justify-center" />
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
+              See what BeINsured is all about
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-sm font-medium">
+              Watch how we're making motor insurance simple, instant, and accessible for every Ghanaian driver.
+            </p>
+          </div>
+          <BrandVideoPlayer />
+        </section>
+      </ScrollReveal>
+
+      {/* 9. CTA SECTION */}
       <ScrollReveal delay={0.15}>
         <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <SectionTag text="Get Started Today" className="justify-center" />
             <h2 className="text-3xl sm:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
-              Take the first step toward{" "}
-              <AnimatedTextCycle 
-                words={["simpler car insurance", "instant protection", "peace of mind"]} 
-                className="text-brand-dark underline decoration-[#FEBD19] decoration-4 underline-offset-4"
-              />
+              Take the first step toward instant coverage
             </h2>
+            <p className="text-lg sm:text-xl text-slate-600 font-medium max-w-2xl mx-auto">
+              Start the process now! Explore, select your preferred channel and buy car insurance today.
+            </p>
           </div>
 
-          {/* Dual Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-            
-            {/* Left Off-White Card */}
-            <div className="card-cream min-h-[380px] flex flex-col justify-center items-center text-center p-8 sm:p-12 space-y-6">
-              <p className="text-lg sm:text-xl font-bold text-brand-dark max-w-md leading-snug">
-                Find a car plan that helps you stay protected on the road and prepared for what's ahead.
-              </p>
-
-              <PillButton variant="gold" onClick={onOpenChannelSelector}>
-                Explore All Channels
-              </PillButton>
-            </div>
-
-            {/* Right Photographic Image Card */}
-            <div className="relative rounded-3xl overflow-hidden min-h-[380px] flex flex-col justify-between p-8 sm:p-10 shadow-card border border-slate-200/80 group">
-              <img 
-                src={images.ctaDriver} 
-                alt="Confident car owner" 
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-slate-950/40" />
-
-              <div className="relative z-10 max-w-sm text-white">
-                <h3 className="text-xl sm:text-2xl font-extrabold leading-snug">
-                  Join thousands of drivers choosing a smarter, simpler way to protect their vehicle.
-                </h3>
-              </div>
-
-              <div className="relative z-10 text-xs font-semibold text-white/90 tracking-wide pt-12">
-                A simpler way to stay protected starts here.
-              </div>
-            </div>
-
+          <div className="flex justify-center pt-2">
+            <PillButton variant="gold" onClick={onOpenChannelSelector} className="text-base px-8 py-3">
+              Get Started Now
+            </PillButton>
           </div>
 
         </section>

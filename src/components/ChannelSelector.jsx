@@ -165,7 +165,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                   </li>
                   <li className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
                     <span className="w-6 h-6 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-xs font-bold shrink-0">3</span>
-                    <span>Enter Vehicle Reg Number, select Third-Party or Comprehensive protection, and enter MoMo PIN. Digital sticker SMS issued instantly.</span>
+                    <span>Enter Vehicle Reg Number, select Third-Party or Comprehensive protection and enter MoMo PIN. Digital sticker SMS issued instantly.</span>
                   </li>
                 </ol>
               </div>

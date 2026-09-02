@@ -62,7 +62,7 @@ export default function PinnedHowItWorks({
     },
     {
       title: "Enter Vehicle Reg & Pay via MoMo",
-      description: "Provide your vehicle number plate (e.g. GX-1940-24), choose Third-Party or Comprehensive, and confirm MoMo payment.",
+      description: "Provide your vehicle number plate (e.g. GX-1940-24), choose Third-Party or Comprehensive and confirm MoMo payment.",
     },
     {
       title: "Receive Instant Digital Sticker",

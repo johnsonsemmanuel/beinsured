@@ -88,7 +88,7 @@ export default function CookieConsent() {
 
                 {/* Content */}
                 <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
-                  We use essential cookies and local session state to ensure smooth digital policy lookup, secure mobile payment rails, and regulatory compliance on BeInsured.
+                  We use essential cookies and local session state to ensure smooth digital policy lookup, secure mobile payment rails and regulatory compliance on BeInsured.
                 </p>
 
                 {/* Actions Footer */}

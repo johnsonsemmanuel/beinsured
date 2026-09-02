@@ -8,15 +8,48 @@ import { ArrowLeft } from 'lucide-react';
 export default function Partners({ onOpenChannelSelector }) {
   const partnerLogos = [
     {
-      id: 'enterprise',
-      name: 'Enterprise Insurance',
-      shortName: 'Enterprise',
-      initials: 'EI',
+      id: 'donewell',
+      name: 'Donewell Assurance',
+      shortName: 'Donewell',
+      initials: 'DA',
       type: 'Motor Insurance Underwriter',
-      licence: 'NIC-LIC-001',
+      licence: 'NIC-LIC-002',
       status: 'Active Underwriter',
       coverage: 'Third-Party & Comprehensive Protection',
-      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.'
+      desc: 'Ghana\'s trusted motor insurance underwriter providing comprehensive backing and full regulatory compliance across all 16 regions.'
+    },
+    {
+      id: 'vanguard',
+      name: 'Vanguard Assurance',
+      shortName: 'Vanguard',
+      initials: 'VA',
+      type: 'Motor Insurance Underwriter',
+      licence: 'NIC-LIC-003',
+      status: 'Active Underwriter',
+      coverage: 'Third-Party & Comprehensive Protection',
+      desc: 'Authorized underwriting partner specializing in flexible motor protection, rapid processing, and instant electronic sticker verification.'
+    },
+    {
+      id: 'hollard',
+      name: 'Hollard Ghana',
+      shortName: 'Hollard',
+      initials: 'HG',
+      type: 'Licensed General Underwriter',
+      licence: 'NIC-LIC-005',
+      status: 'Active Underwriter',
+      coverage: 'Passenger & Commercial Auto Protection',
+      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
+    },
+    {
+      id: 'glico',
+      name: 'GLICO General Insurance',
+      shortName: 'GLICO',
+      initials: 'GG',
+      type: 'Licensed General Underwriter',
+      licence: 'NIC-LIC-008',
+      status: 'Active Underwriter',
+      coverage: 'Passenger & Commercial Auto Protection',
+      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
     },
     {
       id: 'star',
@@ -30,15 +63,15 @@ export default function Partners({ onOpenChannelSelector }) {
       desc: 'Authorized underwriting partner specializing in flexible micro-duration protection, rapid processing, and instant electronic sticker verification.'
     },
     {
-      id: 'glico',
-      name: 'GLICO General Insurance',
-      shortName: 'GLICO',
-      initials: 'GG',
-      type: 'Licensed General Underwriter',
-      licence: 'NIC-LIC-008',
+      id: 'enterprise',
+      name: 'Enterprise Insurance',
+      shortName: 'Enterprise',
+      initials: 'EI',
+      type: 'Motor Insurance Underwriter',
+      licence: 'NIC-LIC-001',
       status: 'Active Underwriter',
-      coverage: 'Passenger & Commercial Auto Protection',
-      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
+      coverage: 'Third-Party & Comprehensive Protection',
+      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.'
     },
     {
       id: 'momo',
@@ -115,7 +148,7 @@ export default function Partners({ onOpenChannelSelector }) {
       <div className="space-y-4 pt-2">
         <div className="flex items-center justify-between text-xs text-slate-500 font-bold uppercase tracking-wider">
           <span>Click any partner card to view complete regulatory details</span>
-          <span className="text-[#FEBD19] font-semibold">8 Active Partners</span>
+          <span className="text-[#FEBD19] font-semibold">11 Active Partners</span>
         </div>
 
         <LogoCloud logos={partnerLogos} onOpenChannelSelector={onOpenChannelSelector} />

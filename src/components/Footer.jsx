@@ -40,7 +40,7 @@ export default function Footer({ onOpenChannelSelector }) {
               />
             </Link>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Simple, instant, and transparent micro car insurance for vehicle owners and drivers across Ghana. Distributed via USSD (*170#), WhatsApp, and MTN MoMo.
+              Simple, instant, and transparent micro car insurance for vehicle owners and drivers across Ghana. Distributed via USSD (*170#), WhatsApp and MTN MoMo.
             </p>
             
             {/* Social Media Buttons */}
@@ -142,7 +142,7 @@ export default function Footer({ onOpenChannelSelector }) {
         <div className="p-6 rounded-2xl bg-brand-cream/80 backdrop-blur-sm border border-slate-200/80 text-xs text-slate-600 leading-relaxed space-y-2">
           <p className="font-bold text-slate-900">Regulatory Disclaimer</p>
           <p>
-            BeINsured is a digital micro car insurance platform brand. All motor insurance policies are underwritten by authorized and licensed insurance partner underwriters under regulatory supervision. BeINsured does not collect funds on this website; car insurance premium transactions occur securely on USSD *170#, WhatsApp Bot, and MTN MoMo App rails.
+             BeINsured is a digital micro car insurance platform brand. All motor insurance policies are underwritten by authorized and licensed insurance partner underwriters under regulatory supervision. BeINsured does not collect funds on this website; car insurance premium transactions occur securely on USSD *170#, WhatsApp Bot and MTN MoMo App rails.
           </p>
         </div>
 

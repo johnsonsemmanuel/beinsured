@@ -7,19 +7,27 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
   const slides = [
     {
       id: 1,
-      title: "Your car insurance made for",
-      animatedWords: ["real life", "busy drivers", "instant cover", "peace of mind"],
-      desc: "Get car protection that supports your daily driving from Third-Party essentials to unexpected road accidents. Simple micro-plans, clear costs, and instant cover.",
+      title: "Buy motor insurance for as low as one month.",
+      animatedWords: ["one month", "flexible terms", "instant protection"],
+      desc: "Get the protection you need without long commitments.",
       image: "/taxi-imagess.jpg",
-      cta: "Get Car Insurance"
+      cta: "Buy Now"
     },
     {
       id: 2,
-      title: "Compulsory road protection for",
-      animatedWords: ["private cars", "commercial taxis", "delivery vans", "fleet vehicles"],
-      desc: "Save on legally required road protection against third-party bodily injury, property damage, and legal liabilities without paperwork or delays.",
+      title: "No lengthy paperwork, no long queues.",
+      animatedWords: ["paperless", "fast", "simple"],
+      desc: "Skip the paperwork and queues. Buy car insurance in minutes from your phone.",
       image: "/trotro-station.jpg",
-      cta: "Explore Protection Options"
+      cta: "Explore Top Insurers"
+    },
+    {
+      id: 3,
+      title: "Using just a phone, buy car insurance in minutes.",
+      animatedWords: ["USSD", "WhatsApp", "MoMo"],
+      desc: "Access motor insurance directly from your smartphone through USSD, WhatsApp, or the MTN MoMo app.",
+      image: "/trotro-station.jpg",
+      cta: "Start Process Now"
     }
   ];
 
@@ -55,9 +63,8 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
           </div>
         ))}
 
-        {/* Top Header Controls (Without Badges) */}
+        {/* Top Header Controls */}
         <div className="relative z-10 flex items-center justify-end">
-          {/* Slide Navigation Controls */}
           <div className="flex items-center gap-1.5 bg-slate-950/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
             <button 
               onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
@@ -82,11 +89,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
         {/* Dynamic Center Slide Content */}
         <div className="relative z-10 max-w-3xl space-y-4 sm:space-y-6 my-auto pt-6 sm:pt-10 pb-6 sm:pb-8">
           <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-            {slide.title}{" "}
-            <AnimatedTextCycle 
-              words={slide.animatedWords} 
-              className="text-[#FEBD19]"
-            />
+            {slide.title}
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-slate-100/95 font-medium leading-relaxed max-w-xl">
