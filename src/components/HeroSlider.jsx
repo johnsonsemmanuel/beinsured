@@ -18,7 +18,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
       title: "No lengthy paperwork, no long queues.",
       animatedWords: ["paperless", "fast", "simple"],
       desc: "Skip the paperwork and queues. Buy car insurance in minutes from your phone.",
-      image: "/trotro-station.jpg",
+      image: "/no-paperwork.jpg",
       cta: "Explore Top Insurers"
     },
     {
@@ -26,7 +26,7 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
       title: "Using just a phone, buy car insurance in minutes.",
       animatedWords: ["USSD", "WhatsApp", "MoMo"],
       desc: "Access motor insurance directly from your smartphone through USSD, WhatsApp, or the MTN MoMo app.",
-      image: "/trotro-station.jpg",
+      image: "/phone.jpg",
       cta: "Start Process Now"
     }
   ];
