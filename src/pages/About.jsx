@@ -25,16 +25,16 @@ export default function About({ onOpenChannelSelector }) {
       <section className="px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative group rounded-3xl overflow-hidden shadow-card border border-slate-200/80 h-64 sm:h-80">
-            <img 
-              src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"
-              alt="Driver behind steering wheel" 
+              <img 
+                src="/trotro-station.jpg"
+                alt="Driver behind steering wheel" 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
 
           <div className="space-y-5">
             <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
-              Our car insurance plans are designed to be easy to understand and simple to manage directly on your mobile handset. We partner with licensed underwriters to give you instant, legitimate coverage.
+              Our car insurance plans are designed to be easy to understand and simple to manage directly on your mobile handset. We partner with licensed underwriters to give you instant, legitimate protection.
             </p>
             
             <div className="p-5 rounded-2xl bg-white border border-slate-200/80 space-y-3 shadow-sm">
@@ -58,9 +58,9 @@ export default function About({ onOpenChannelSelector }) {
         <SectionTag text="Our Values" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
           {[
-            { icon: ShieldCheck, title: "Transparency First", desc: "Every premium, every policy clause, and every claim step is fully visible to you. No hidden fees, no fine-print surprises." },
-            { icon: Users, title: "Driver-Centric Design", desc: "We built BeInsured around real driver habits — quick USSD access, WhatsApp claims, and instant MoMo payments." },
-            { icon: Smartphone, title: "Mobile-Native", desc: "Your insurance lives on your phone. Buy, renew, verify, and claim — all from your handset without visiting an office." },
+            { icon: ShieldCheck, title: "Transparency First", desc: "Every premium and every policy clause is fully visible to you. No hidden fees, no fine-print surprises." },
+            { icon: Users, title: "Driver-Centric Design", desc: "We built BeInsured around real driver habits — quick USSD access, WhatsApp support, and instant MoMo payments." },
+            { icon: Smartphone, title: "Mobile-Native", desc: "Your insurance lives on your phone. Buy, renew, and verify — all from your handset without visiting an office." },
           ].map((v, i) => (
             <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200/80 space-y-3 shadow-sm hover:shadow-md hover:border-[#FEBD19] transition-all duration-300">
               <div className="w-10 h-10 rounded-xl bg-[#FEBD19] text-brand-dark flex items-center justify-center">

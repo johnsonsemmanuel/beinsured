@@ -85,7 +85,7 @@ export default function PartnerModal({ isOpen, partner, onClose, onOpenChannelSe
 
           {/* Coverage & Services */}
           <div className="space-y-2.5 pt-1">
-            <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Underwritten Coverage Options</h4>
+            <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Underwritten Protection Options</h4>
             <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -111,7 +111,7 @@ export default function PartnerModal({ isOpen, partner, onClose, onOpenChannelSe
                 onClick={() => { onClose(); onOpenChannelSelector(); }}
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#FEBD19] text-[#0F172A] text-xs font-bold hover:bg-amber-400 transition-colors cursor-pointer"
               >
-                <span>Get Car Cover Underwritten by {partner.shortName || partner.name}</span>
+                <span>Get Car Insurance Underwritten by {partner.shortName || partner.name}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

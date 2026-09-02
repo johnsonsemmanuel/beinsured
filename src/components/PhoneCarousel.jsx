@@ -12,14 +12,14 @@ export default function PhoneCarousel({ images, className = "" }) {
       src: ussdImg,
       alt: "USSD *170# BeInsured Menu Screen",
       title: "USSD *170# Shortcode Channel",
-      subtitle: "Instantly register vehicle cover by dialing *170# on any mobile handset without internet.",
+      subtitle: "Instantly register vehicle insurance by dialing *170# on any mobile handset without internet.",
       tag: "USSD *170# Channel"
     },
     {
       src: whatsappImg,
       alt: "WhatsApp Bot Insurance Chat Screen",
       title: "WhatsApp 24/7 Auto Bot",
-      subtitle: "Chat with our verified WhatsApp bot for photo claims, instant registration, and digital sticker verification.",
+      subtitle: "Chat with our verified WhatsApp bot for photo uploads, instant registration, and digital sticker verification.",
       tag: "WhatsApp Verified Bot"
     },
     {
@@ -108,7 +108,7 @@ export default function PhoneCarousel({ images, className = "" }) {
           </h3>
 
           <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
-            {active.subtitle || "Access Third-Party & Comprehensive motor coverage right from your phone handset."}
+             {active.subtitle || "Access Third-Party & Comprehensive motor insurance right from your phone handset."}
           </p>
         </div>
 

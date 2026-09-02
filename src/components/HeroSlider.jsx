@@ -9,25 +9,17 @@ export default function HeroSlider({ onOpenChannelSelector, onOpenPolicyLookup }
       id: 1,
       title: "Your car insurance made for",
       animatedWords: ["real life", "busy drivers", "instant cover", "peace of mind"],
-      desc: "Get car coverage that supports your daily driving from Third-Party essentials to unexpected road accidents. Simple micro-plans, clear costs, and instant claims.",
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=80",
-      cta: "Get Car Cover"
+      desc: "Get car protection that supports your daily driving from Third-Party essentials to unexpected road accidents. Simple micro-plans, clear costs, and instant cover.",
+      image: "/taxi-imagess.jpg",
+      cta: "Get Car Insurance"
     },
     {
       id: 2,
-      title: "Compulsory road cover for",
+      title: "Compulsory road protection for",
       animatedWords: ["private cars", "commercial taxis", "delivery vans", "fleet vehicles"],
-      desc: "Save on legally required road coverage against third-party bodily injury, property damage, and legal liabilities without paperwork or delays.",
-      image: "/hero-slide-1.jpg",
-      cta: "Explore Cover Options"
-    },
-    {
-      id: 3,
-      title: "File vehicle claims via",
-      animatedWords: ["WhatsApp bot", "photo uploads", "direct MoMo", "24/7 support"],
-      desc: "Had a collision or vehicle damage? Snap photos, upload on WhatsApp, and receive approved claim payouts directly into your Mobile Money wallet.",
-      image: "/hero-slide-2.jpg",
-      cta: "File a Claim Now"
+      desc: "Save on legally required road protection against third-party bodily injury, property damage, and legal liabilities without paperwork or delays.",
+      image: "/trotro-station.jpg",
+      cta: "Explore Protection Options"
     }
   ];
 

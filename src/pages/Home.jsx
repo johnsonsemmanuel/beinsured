@@ -7,15 +7,14 @@ import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import HeroSlider from '../components/HeroSlider';
 import PhoneCarousel from '../components/PhoneCarousel';
 import ScrollReveal from '../components/ScrollReveal';
-import BrandVideoPlayer from '../components/BrandVideoPlayer';
+
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
   const images = {
-    aboutDriver: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80",
-    thirdParty: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
-    roadsideAssist: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80",
-    ctaDriver: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+    aboutDriver: "/trotro-station.jpg",
+    roadsideAssist: "/taxi-images.jpg",
+    ctaDriver: "/taxi-imagess.jpg"
   };
 
   return (
@@ -26,22 +25,6 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         onOpenChannelSelector={onOpenChannelSelector}
         onOpenPolicyLookup={onOpenPolicyLookup}
       />
-
-      {/* 1.5 BRAND FILM — Inline Video Section */}
-      <ScrollReveal>
-        <section className="px-4 sm:px-8 max-w-5xl mx-auto space-y-5">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <SectionTag text="Brand Film" className="justify-center" />
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
-              See what BeINsured is all about
-            </h2>
-            <p className="text-slate-600 text-xs sm:text-sm font-medium">
-              Watch how we're making motor insurance simple, instant, and accessible for every Ghanaian driver.
-            </p>
-          </div>
-          <BrandVideoPlayer />
-        </section>
-      </ScrollReveal>
 
       {/* 2. ABOUT US / PURPOSE STATEMENT */}
       <ScrollReveal>
@@ -74,7 +57,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
 
             <div className="space-y-4">
               <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                Our plans are designed to be easy to understand and simple to manage on your phone. Whether you need compulsory Third-Party protection or comprehensive cover, we deliver instant digital policy verification.
+                Our plans are designed to be easy to understand and simple to manage on your phone. Whether you need compulsory Third-Party protection or comprehensive protection, we deliver instant digital policy verification.
               </p>
               <div className="pt-1 flex items-center gap-4">
                 <Link 
@@ -91,58 +74,21 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </section>
       </ScrollReveal>
 
-      {/* 3. COVERAGE OPTIONS */}
-      <ScrollReveal delay={0.1}>
-        <section id="coverage" className="px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
-          <div className="flex items-center justify-between">
-            <SectionTag text="Car Cover Options" />
-            <Link 
-              to="/coverage"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-xs font-bold text-brand-dark hover:text-[#FEBD19] hover:underline flex items-center gap-1 cursor-pointer transition-colors"
-            >
-              <span>Explore All Cover Options</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+      {/* 3. MOBILE APP & CHANNEL SHOWCASE */}
+      <ScrollReveal delay={0.15}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <SectionTag text="Mobile-Native Insurance" className="justify-center" />
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Designed to fit directly in your pocket
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base font-medium">
+              See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-cream p-6 sm:p-8 flex flex-col justify-between space-y-6">
-              <div className="space-y-3">
-                <div className="font-bold text-xs uppercase tracking-wider text-brand-dark">Plan Option 01</div>
-                <h3 className="text-xl font-extrabold text-slate-900">Third-Party Motor Essentials</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Covers legally required road liabilities including third-party bodily injury and property damage. Instant digital verification sent via SMS.
-                </p>
-              </div>
-              <PillButton variant="gold" onClick={onOpenChannelSelector}>
-                Get Third-Party Cover
-              </PillButton>
-            </div>
-
-            <div className="relative rounded-3xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between space-y-6 text-white group shadow-card border border-slate-200/80 min-h-[260px]">
-              <img 
-                src={images.thirdParty} 
-                alt="Car driving safely" 
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-slate-950/60" />
-
-              <div className="relative z-10 space-y-2">
-                <div className="font-bold text-xs uppercase tracking-wider text-[#FEBD19]">Plan Option 02</div>
-                <h3 className="text-xl font-extrabold text-white">Comprehensive Vehicle Protection</h3>
-                <p className="text-xs text-slate-200 leading-relaxed max-w-sm">
-                  Complete coverage for accidental vehicle damage, fire, theft, and third-party protection with fast claims processing.
-                </p>
-              </div>
-
-              <div className="relative z-10">
-                <PillButton variant="gold" onClick={onOpenChannelSelector}>
-                  Get Comprehensive Cover
-                </PillButton>
-              </div>
-            </div>
+          <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
+            <PhoneCarousel />
           </div>
         </section>
       </ScrollReveal>
@@ -166,68 +112,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         </section>
       </ScrollReveal>
 
-      {/* 5. MOBILE APP & CHANNEL SHOWCASE */}
-      <ScrollReveal delay={0.15}>
-        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <SectionTag text="Mobile-Native Insurance" className="justify-center" />
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-              Designed to fit directly in your pocket
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base font-medium">
-              See how BeInsured works seamlessly on your smartphone handset via USSD, WhatsApp, and Mobile Money.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-card">
-            <PhoneCarousel />
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* 6. CLAIMS GUIDANCE SECTION */}
-      <ScrollReveal delay={0.1}>
-        <section id="claims" className="px-4 sm:px-8 max-w-7xl mx-auto">
-          <div className="card-cream p-8 sm:p-12 space-y-8">
-            
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="space-y-2">
-                <SectionTag text="Vehicle Claims" />
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
-                  Filing a vehicle claim is paperless and fast
-                </h2>
-              </div>
-              <PillButton variant="gold" onClick={onOpenChannelSelector}>
-                File Claim on WhatsApp
-              </PillButton>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200/80">
-              <div className="space-y-2">
-                <div className="font-bold text-sm text-slate-900">Step 1: Snap Photos</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Take photos of the vehicle damage or collision scene and send them directly to our WhatsApp bot.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <div className="font-bold text-sm text-slate-900">Step 2: Underwriter Assessment</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Your claim details are assessed rapidly by licensed partner insurance underwriters.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <div className="font-bold text-sm text-slate-900">Step 3: Direct MoMo Payout</div>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Approved repairs or claim funds are deposited straight into your registered MTN MoMo wallet.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* 7. CTA SECTION WITH ANIMATED TEXT CYCLE */}
+      {/* 5. CTA SECTION WITH ANIMATED TEXT CYCLE */}
       <ScrollReveal delay={0.15}>
         <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
           
@@ -236,7 +121,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
             <h2 className="text-3xl sm:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
               Take the first step toward{" "}
               <AnimatedTextCycle 
-                words={["simpler car insurance", "instant coverage", "stress-free claims"]} 
+                words={["simpler car insurance", "instant protection", "peace of mind"]} 
                 className="text-brand-dark underline decoration-[#FEBD19] decoration-4 underline-offset-4"
               />
             </h2>
@@ -268,12 +153,12 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
 
               <div className="relative z-10 max-w-sm text-white">
                 <h3 className="text-xl sm:text-2xl font-extrabold leading-snug">
-                  Join thousands of drivers choosing a smarter, simpler way to cover their vehicle.
+                  Join thousands of drivers choosing a smarter, simpler way to protect their vehicle.
                 </h3>
               </div>
 
               <div className="relative z-10 text-xs font-semibold text-white/90 tracking-wide pt-12">
-                A simpler way to stay covered starts here.
+                A simpler way to stay protected starts here.
               </div>
             </div>
 

@@ -10,9 +10,7 @@ import TopSubtleHeroBackground from './components/TopSubtleHeroBackground';
 import { PageTransition } from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
-import Coverage from './pages/Coverage';
 import HowItWorksPage from './pages/HowItWorksPage';
-import Claims from './pages/Claims';
 import Partners from './pages/Partners';
 
 // Scroll to top automatically on route changes
@@ -53,30 +51,10 @@ function AnimatedRoutes({ onOpenChannelSelector, onOpenPolicyLookup }) {
           } 
         />
         <Route 
-          path="/coverage" 
-          element={
-            <PageTransition>
-              <Coverage 
-                onOpenChannelSelector={onOpenChannelSelector}
-              />
-            </PageTransition>
-          } 
-        />
-        <Route 
           path="/how-it-works" 
           element={
             <PageTransition>
               <HowItWorksPage 
-                onOpenChannelSelector={onOpenChannelSelector}
-              />
-            </PageTransition>
-          } 
-        />
-        <Route 
-          path="/claims" 
-          element={
-            <PageTransition>
-              <Claims 
                 onOpenChannelSelector={onOpenChannelSelector}
               />
             </PageTransition>

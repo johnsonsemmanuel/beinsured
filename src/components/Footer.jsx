@@ -70,7 +70,7 @@ export default function Footer({ onOpenChannelSelector }) {
 
             <div className="pt-2">
               <PillButton variant="gold" onClick={onOpenChannelSelector} className="text-xs">
-                Get Car Cover
+                Get Car Insurance
               </PillButton>
             </div>
           </div>
@@ -89,16 +89,6 @@ export default function Footer({ onOpenChannelSelector }) {
               <li>
                 <Link to="/how-it-works" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#FEBD19] transition-colors">
                   How It Works
-                </Link>
-              </li>
-              <li>
-                <Link to="/coverage" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#FEBD19] transition-colors">
-                  Car Cover Options
-                </Link>
-              </li>
-              <li>
-                <Link to="/claims" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[#FEBD19] transition-colors">
-                  Vehicle Claims
                 </Link>
               </li>
               <li>

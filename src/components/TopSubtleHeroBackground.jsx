@@ -2,28 +2,17 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Import distinct AI-generated car background assets
-import homeBgCar from '../assets/bg_cars/home_bg_car.png';
-import howItWorksBgCar from '../assets/bg_cars/how_it_works_bg_car.png';
-import coverageBgCar from '../assets/bg_cars/coverage_bg_car.png';
-import claimsBgCar from '../assets/bg_cars/claims_bg_car.png';
-import partnersBgCar from '../assets/bg_cars/partners_bg_car.png';
-import aboutBgCar from '../assets/bg_cars/about_bg_car.png';
-
 export default function TopSubtleHeroBackground() {
   const { pathname } = useLocation();
 
-  // Distinct car background image per page
   const backgroundMap = {
-    '/': homeBgCar,            // Home: Luxury sedan highway motion
-    '/how-it-works': howItWorksBgCar, // How It Works: High-tech digital cockpit & steering
-    '/coverage': coverageBgCar,       // Coverage: Premium G-Class / SUV open highway
-    '/claims': claimsBgCar,           // Claims: Aston Martin style headlight rain detail
-    '/partners': partnersBgCar,       // Partners: Executive corporate sedan fleet
-    '/about': aboutBgCar,             // About: Electric crossover scenic green road
+    '/': '/trotro-station.jpg',
+    '/how-it-works': '/trotro-station.jpg',
+    '/partners': '/trotro-station.jpg',
+    '/about': '/trotro-station.jpg',
   };
 
-  const currentImage = backgroundMap[pathname] || backgroundMap['/'];
+  const currentImage = backgroundMap[pathname] || '/trotro-station.jpg';
 
   return (
     <div className="absolute top-0 left-0 right-0 h-[700px] sm:h-[780px] pointer-events-none overflow-hidden z-0 select-none">

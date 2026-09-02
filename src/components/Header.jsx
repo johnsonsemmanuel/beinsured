@@ -23,8 +23,6 @@ export default function Header({ onOpenChannelSelector }) {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/how-it-works', label: 'How It Works' },
-    { path: '/coverage', label: 'Car Coverage' },
-    { path: '/claims', label: 'Claims' },
     { path: '/partners', label: 'Partners & Insurers' },
     { path: '/about', label: 'About Us' },
   ];
@@ -87,7 +85,7 @@ export default function Header({ onOpenChannelSelector }) {
         <div className="flex items-center gap-3">
           <div className="hidden sm:block">
             <PillButton variant="gold" onClick={onOpenChannelSelector}>
-              Get Car Cover
+              Get Car Insurance
             </PillButton>
           </div>
 
@@ -139,7 +137,7 @@ export default function Header({ onOpenChannelSelector }) {
                 onClick={() => { setMobileMenuOpen(false); onOpenChannelSelector(); }} 
                 className="w-full justify-center"
               >
-                Get Car Cover
+                Get Car Insurance
               </PillButton>
             </div>
           </motion.div>

@@ -51,7 +51,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
             <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-dark mb-1 border-b-2 border-brand-gold pb-0.5">
               <span>Official Car Insurance Channels</span>
             </div>
-            <h3 className="text-xl font-bold text-brand-dark">Get Covered or Manage Car Policy</h3>
+             <h3 className="text-xl font-bold text-brand-dark">Get Protected or Manage Car Policy</h3>
           </div>
           <button 
             onClick={onClose}
@@ -129,7 +129,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                 <div className="space-y-1 text-center sm:text-left">
                   <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">USSD Quick Dial</div>
                   <div className="text-3xl font-extrabold text-brand-dark font-mono">{ussdCode}</div>
-                  <div className="text-xs text-slate-600">Dial on MTN Ghana network for instant car cover</div>
+                   <div className="text-xs text-slate-600">Dial on MTN Ghana network for instant car insurance</div>
                 </div>
 
                 <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -165,7 +165,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                   </li>
                   <li className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
                     <span className="w-6 h-6 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-xs font-bold shrink-0">3</span>
-                    <span>Enter Vehicle Reg Number, select Third-Party or Comprehensive cover, and enter MoMo PIN. Digital sticker SMS issued instantly.</span>
+                    <span>Enter Vehicle Reg Number, select Third-Party or Comprehensive protection, and enter MoMo PIN. Digital sticker SMS issued instantly.</span>
                   </li>
                 </ol>
               </div>
@@ -181,7 +181,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                     WhatsApp Car Insurance Bot
                   </div>
                   <h4 className="text-lg font-extrabold text-slate-900">BeInsured Auto Assistant</h4>
-                  <p className="text-xs text-slate-600 max-w-sm">Chat 24/7 to renew car insurance, send accident photos for instant claims, or receive digital policy documents.</p>
+                  <p className="text-xs text-slate-600 max-w-sm">Chat 24/7 to renew car insurance, send accident photos for verification, or receive digital policy documents.</p>
                 </div>
 
                 <div className="flex flex-col items-center gap-3 shrink-0">
@@ -219,7 +219,7 @@ export default function ChannelSelector({ isOpen, onClose }) {
                   BeInsured Motor is officially embedded directly inside the MTN MoMo smartphone app marketplace. Buy car insurance and manage renewals straight from your MoMo wallet.
                 </p>
                 <div className="p-3.5 rounded-xl bg-white border border-amber-200 text-xs text-slate-800 font-medium">
-                  Path: <strong>MoMo App → Financial Services → Motor Insurance → BeInsured Car Cover</strong>
+                  Path: <strong>MoMo App → Financial Services → Motor Insurance → BeInsured Car Insurance</strong>
                 </div>
               </div>
             </div>

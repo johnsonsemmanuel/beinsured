@@ -15,8 +15,8 @@ export default function Partners({ onOpenChannelSelector }) {
       type: 'Motor Insurance Underwriter',
       licence: 'NIC-LIC-001',
       status: 'Active Underwriter',
-      coverage: 'Third-Party & Comprehensive Car Cover',
-      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive claims backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.'
+      coverage: 'Third-Party & Comprehensive Protection',
+      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.'
     },
     {
       id: 'star',
@@ -26,8 +26,8 @@ export default function Partners({ onOpenChannelSelector }) {
       type: 'Motor Micro-Insurance Partner',
       licence: 'NIC-LIC-004',
       status: 'Active Underwriter',
-      coverage: 'Micro-Motor & Commercial Vehicle Cover',
-      desc: 'Authorized underwriting partner specializing in flexible micro-duration car coverage, rapid claims processing, and instant electronic sticker verification.'
+      coverage: 'Micro-Motor & Commercial Vehicle Protection',
+      desc: 'Authorized underwriting partner specializing in flexible micro-duration protection, rapid processing, and instant electronic sticker verification.'
     },
     {
       id: 'glico',
@@ -37,8 +37,8 @@ export default function Partners({ onOpenChannelSelector }) {
       type: 'Licensed General Underwriter',
       licence: 'NIC-LIC-008',
       status: 'Active Underwriter',
-      coverage: 'Passenger & Commercial Auto Coverage',
-      desc: 'Established motor underwriter supporting rapid digital claims settlement via mobile money rails and dedicated roadside motor assistance.'
+      coverage: 'Passenger & Commercial Auto Protection',
+      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
     },
     {
       id: 'momo',
@@ -92,8 +92,8 @@ export default function Partners({ onOpenChannelSelector }) {
       type: 'Industry Association Member',
       licence: 'GIA-MBR-88',
       status: 'Industry Body',
-      coverage: 'Motor Claims & Industry Standards',
-      desc: 'Peak trade association ensuring underwriter solvency, fair claims resolution, and motor insurance consumer protection.'
+      coverage: 'Motor Insurance Standards',
+      desc: 'Peak trade association ensuring underwriter solvency, fair resolution, and motor insurance consumer protection.'
     }
   ];
 
@@ -107,7 +107,7 @@ export default function Partners({ onOpenChannelSelector }) {
           Licensed Underwriters & Institutional Partners
         </h1>
         <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
-          BeINsured operates as a digital distribution platform. Click on any licensed partner or underwriter below to inspect official registration credentials, insurance cover types, and verification details.
+           BeINsured operates as a digital distribution platform. Click on any licensed partner or underwriter below to inspect official registration credentials, protection types, and verification details.
         </p>
       </div>
 

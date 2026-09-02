@@ -79,7 +79,7 @@ export default function PolicyLookupModal({ isOpen, onClose, onOpenChannelSelect
               <span>Design Placeholder Notice</span>
             </div>
             <p className="text-xs text-amber-950 leading-relaxed">
-              Direct web-based car policy lookup is a design placeholder for v1. To instantly verify active car coverage or check digital sticker status, dial USSD *170# or open WhatsApp:
+               Direct web-based car policy lookup is a design placeholder for v1. To instantly verify active car protection or check digital sticker status, dial USSD *170# or open WhatsApp:
             </p>
             <div className="pt-1 flex flex-wrap gap-2">
               <button
