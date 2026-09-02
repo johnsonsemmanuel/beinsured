@@ -172,15 +172,20 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              'Donewell Assurance',
-              'Vanguard Assurance',
-              'Hollard Ghana',
-              'Glico General',
-              'Star Assurance',
-              'Enterprise Insurance'
-            ].map((name, i) => (
-              <div key={i} className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm flex items-center justify-center text-center hover:border-[#FEBD19] hover:shadow-md transition-all duration-300">
-                <span className="text-xs sm:text-sm font-bold text-slate-700">{name}</span>
+              { name: 'Donewell Assurance', src: '/donewell-logo.png', alt: 'Donewell Assurance Logo' },
+              { name: 'Vanguard Assurance', src: '/vanguard-logo.png', alt: 'Vanguard Assurance Logo' },
+              { name: 'Hollard Ghana', src: '/hollard-logo.png', alt: 'Hollard Ghana Logo' },
+              { name: 'GLICO General Insurance', src: '/glico-logo.jpg', alt: 'GLICO General Insurance Logo' },
+              { name: 'Star Assurance', src: '/star-logo.png', alt: 'Star Assurance Logo' },
+              { name: 'Enterprise Insurance', src: '/enterprise-logo.png', alt: 'Enterprise Insurance Logo' }
+            ].map((logo, i) => (
+              <div key={i} className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm flex items-center justify-center hover:border-[#FEBD19] hover:shadow-md transition-all duration-300">
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="max-h-10 sm:max-h-12 w-auto object-contain"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

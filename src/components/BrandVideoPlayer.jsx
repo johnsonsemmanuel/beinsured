@@ -78,7 +78,7 @@ export default function BrandVideoPlayer() {
           playsInline
           onEnded={handleVideoEnd}
         >
-          <source src="/beinsured-brand.mp4" type="video/mp4" />
+          <source src="/beinsured-ad.mp4" type="video/mp4" />
         </video>
 
         {/* Poster Overlay (before play) */}

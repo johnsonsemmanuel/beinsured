@@ -16,7 +16,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-002',
       status: 'Active Underwriter',
       coverage: 'Third-Party & Comprehensive Protection',
-      desc: 'Ghana\'s trusted motor insurance underwriter providing comprehensive backing and full regulatory compliance across all 16 regions.'
+      desc: 'Ghana\'s trusted motor insurance underwriter providing comprehensive backing and full regulatory compliance across all 16 regions.',
+      src: '/donewell-logo.png',
+      alt: 'Donewell Assurance Logo'
     },
     {
       id: 'vanguard',
@@ -27,7 +29,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-003',
       status: 'Active Underwriter',
       coverage: 'Third-Party & Comprehensive Protection',
-      desc: 'Authorized underwriting partner specializing in flexible motor protection, rapid processing, and instant electronic sticker verification.'
+      desc: 'Authorized underwriting partner specializing in flexible motor protection, rapid processing, and instant electronic sticker verification.',
+      src: '/vanguard-logo.png',
+      alt: 'Vanguard Assurance Logo'
     },
     {
       id: 'hollard',
@@ -38,7 +42,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-005',
       status: 'Active Underwriter',
       coverage: 'Passenger & Commercial Auto Protection',
-      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
+      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.',
+      src: '/hollard-logo.png',
+      alt: 'Hollard Ghana Logo'
     },
     {
       id: 'glico',
@@ -49,7 +55,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-008',
       status: 'Active Underwriter',
       coverage: 'Passenger & Commercial Auto Protection',
-      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.'
+      desc: 'Established motor underwriter supporting rapid digital settlement via mobile money rails and dedicated roadside motor assistance.',
+      src: '/glico-logo.jpg',
+      alt: 'GLICO General Insurance Logo'
     },
     {
       id: 'star',
@@ -60,7 +68,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-004',
       status: 'Active Underwriter',
       coverage: 'Micro-Motor & Commercial Vehicle Protection',
-      desc: 'Authorized underwriting partner specializing in flexible micro-duration protection, rapid processing, and instant electronic sticker verification.'
+      desc: 'Authorized underwriting partner specializing in flexible micro-duration protection, rapid processing, and instant electronic sticker verification.',
+      src: '/star-logo.png',
+      alt: 'Star Assurance Logo'
     },
     {
       id: 'enterprise',
@@ -71,7 +81,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'NIC-LIC-001',
       status: 'Active Underwriter',
       coverage: 'Third-Party & Comprehensive Protection',
-      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.'
+      desc: 'Ghana\'s leading motor insurance underwriter providing comprehensive backing, 24/7 underwriting reserves, and full regulatory compliance across all 16 regions.',
+      src: '/enterprise-logo.png',
+      alt: 'Enterprise Insurance Logo'
     },
     {
       id: 'momo',
