@@ -69,13 +69,13 @@ export default function BrandVideoPlayer() {
       {/* Aspect Ratio Container */}
       <div className="relative w-full" style={{ paddingBottom: '56.6%' }}>
         
-        {/* Video Element */}
+        {/* Video Element - visible as poster before play */}
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          poster="/video-poster.jpg"
-          preload="none"
+          preload="metadata"
           playsInline
+          muted
           onEnded={handleVideoEnd}
         >
           <source src="/beinsured-ad.mp4" type="video/mp4" />
