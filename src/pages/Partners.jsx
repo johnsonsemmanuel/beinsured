@@ -140,28 +140,6 @@ export default function Partners({ onOpenChannelSelector }) {
       alt: 'MTN Mobile Money Logo'
     },
     {
-      id: 'telecel',
-      name: 'Telecel Cash',
-      shortName: 'Telecel',
-      initials: 'TC',
-      type: 'Mobile Money Partner',
-      licence: 'TEL-GH-02',
-      status: 'Active Rail Partner',
-      coverage: 'Mobile Money Car Premium Payments',
-      desc: 'Integrated mobile money wallet rail providing instant micro-premium settlements for car owners nationwide.'
-    },
-    {
-      id: 'at',
-      name: 'AT Money',
-      shortName: 'AT Money',
-      initials: 'AT',
-      type: 'Mobile Money Partner',
-      licence: 'ATM-GH-03',
-      status: 'Active Rail Partner',
-      coverage: 'Mobile Wallet Checkout',
-      desc: 'Telecom mobile money partner supporting micro-duration motor insurance premiums.'
-    },
-    {
       id: 'calbank',
       name: 'CALBANK',
       shortName: 'CALBANK',
@@ -199,17 +177,6 @@ export default function Partners({ onOpenChannelSelector }) {
       desc: 'The official regulatory authority governing all insurance entities and micro-car insurance operations in Ghana.',
       src: '/nic-logo.png',
       alt: 'National Insurance Commission Logo'
-    },
-    {
-      id: 'gia',
-      name: 'Ghana Insurance Association (GIA)',
-      shortName: 'GIA',
-      initials: 'GIA',
-      type: 'Industry Association Member',
-      licence: 'GIA-MBR-88',
-      status: 'Industry Body',
-      coverage: 'Motor Insurance Standards',
-      desc: 'Peak trade association ensuring underwriter solvency, fair resolution, and motor insurance consumer protection.'
     }
   ];
 
@@ -239,7 +206,7 @@ export default function Partners({ onOpenChannelSelector }) {
       <div className="space-y-4 pt-2">
         <div className="flex items-center justify-between text-xs text-slate-500 font-bold uppercase tracking-wider">
           <span>Click any partner card to view complete regulatory details</span>
-          <span className="text-[#FEBD19] font-semibold">11 Active Partners</span>
+          <span className="text-[#FEBD19] font-semibold">8 Active Partners</span>
         </div>
 
         <LogoCloud logos={partnerLogos} onOpenChannelSelector={onOpenChannelSelector} />
