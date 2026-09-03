@@ -135,7 +135,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'MOMO-GH-01',
       status: 'Active Rail Partner',
       coverage: 'USSD *170# & MoMo App Direct Billing',
-      desc: 'Official payment and USSD distribution channel enabling instant premium deduction and real-time digital policy sticker delivery on *170#.'
+      desc: 'Official payment and USSD distribution channel enabling instant premium deduction and real-time digital policy sticker delivery on *170#.',
+      src: '/mtn-momo-logo.jpg',
+      alt: 'MTN Mobile Money Logo'
     },
     {
       id: 'telecel',
@@ -160,6 +162,32 @@ export default function Partners({ onOpenChannelSelector }) {
       desc: 'Telecom mobile money partner supporting micro-duration motor insurance premiums.'
     },
     {
+      id: 'calbank',
+      name: 'CALBANK',
+      shortName: 'CALBANK',
+      initials: 'CB',
+      type: 'Banking & Payment Partner',
+      licence: 'BANK-GH-01',
+      status: 'Active Partner',
+      coverage: 'Banking & Payment Solutions',
+      desc: 'Leading Ghanaian bank providing payment infrastructure and financial services support for motor insurance transactions.',
+      src: '/calbank-logo.png',
+      alt: 'CALBANK Logo'
+    },
+    {
+      id: 'rudder',
+      name: 'Rudder Insurance Brokers',
+      shortName: 'Rudder',
+      initials: 'RIB',
+      type: 'Insurance Brokerage Partner',
+      licence: 'BROK-GH-01',
+      status: 'Active Partner',
+      coverage: 'Insurance Brokerage & Advisory',
+      desc: 'Professional insurance brokerage firm providing advisory services and facilitating optimal motor insurance solutions for clients.',
+      src: '/rudder-insurance-logo.jpg',
+      alt: 'Rudder Insurance Brokers Logo'
+    },
+    {
       id: 'nic',
       name: 'National Insurance Commission (NIC)',
       shortName: 'NIC Ghana',
@@ -168,7 +196,9 @@ export default function Partners({ onOpenChannelSelector }) {
       licence: 'GOV-NIC-GH',
       status: 'Regulatory Oversight',
       coverage: 'Motor Database & Sticker Verification',
-      desc: 'The official regulatory authority governing all insurance entities and micro-car insurance operations in Ghana.'
+      desc: 'The official regulatory authority governing all insurance entities and micro-car insurance operations in Ghana.',
+      src: '/nic-logo.png',
+      alt: 'National Insurance Commission Logo'
     },
     {
       id: 'gia',
