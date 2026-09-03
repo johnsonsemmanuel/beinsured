@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Essential pages
+Allow: /
+Allow: /about
+Allow: /how-it-works
+Allow: /partners
+
+# Block admin and development paths
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+
+# Specific bot permissions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.beinsured.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

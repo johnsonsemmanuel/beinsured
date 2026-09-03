@@ -8,7 +8,49 @@ import HeroSlider from '../components/HeroSlider';
 import PhoneCarousel from '../components/PhoneCarousel';
 import ScrollReveal from '../components/ScrollReveal';
 import BrandVideoPlayer from '../components/BrandVideoPlayer';
+import SEO from '../components/SEO';
 import { Car, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight, Play, Search, HelpCircle, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'BeINsured',
+  url: 'https://www.beinsured.com',
+  logo: 'https://www.beinsured.com/logo.png',
+  description: 'Digital micro car insurance platform for Ghanaian drivers',
+  email: 'info@beinsured.com',
+  telephone: '+233531100408',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'GH'
+  },
+  sameAs: [
+    'https://www.instagram.com/beinsuredautoinsurance',
+    'https://www.tiktok.com/@beinsuredautoinsurance'
+  ]
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'BeInsured',
+  url: 'https://www.beinsured.com',
+  description: 'Digital micro car insurance platform for Ghanaian drivers',
+  inLanguage: 'en-GH',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://www.beinsured.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string'
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.beinsured.com' }
+  ]
+};
 
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
   const images = {
@@ -18,6 +60,14 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
   };
 
   return (
+    <>
+      <SEO
+        title="BeInsured | Simple, Reliable Insurance Made for Real Life"
+        description="Buy motor insurance in minutes via USSD *170#, WhatsApp, or MTN MoMo. BeINsured brings Ghana's top insurance companies together in one marketplace."
+        canonicalUrl="/"
+        ogImage="/og-image.jpg"
+        structuredData={[organizationSchema, websiteSchema, breadcrumbSchema]}
+      />
     <div className="space-y-16 sm:space-y-24 pb-12">
       
       {/* 1. HERO SLIDER SECTION */}
@@ -241,7 +291,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
 
         </section>
       </ScrollReveal>
-
-    </div>
+      </div>
+    </>
   );
 }

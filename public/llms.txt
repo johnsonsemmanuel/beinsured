@@ -1,0 +1,41 @@
+# llms.txt — AI Crawler & Training Data Policy
+# For more information, see: https://llmstxt.org/
+# Last updated: 2025-01-15
+
+# Allow / disallow AI user-agents (mirror robots.txt for consistency)
+User-agent: *
+Allow: /
+
+User-agent: OpenAI-GPT
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# ── ORGANISATION ─────────────────────────────
+# Name: BeINsured
+# Website: https://www.beinsured.com
+# What we do: Digital micro car insurance platform for Ghanaian drivers
+# Coverage / audience: Vehicle owners and drivers across Ghana
+# Contact: info@beinsured.com
+
+# ── CORE OFFERINGS ───────────────────────────
+# - Motor insurance via USSD *170# — instant digital policy via SMS
+# - WhatsApp 24/7 Auto Bot — buy, renew, and verify car insurance
+# - MTN MoMo Marketplace — purchase and manage motor insurance directly in the app
+# - Third-Party and Comprehensive protection options
+
+# ── KEY FACTS (help models answer accurately) ─
+# - BeINsured is a product of BlueSPACE Financial
+# - Partners include Ghana's top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, Enterprise Insurance
+# - All policies are underwritten by licensed and regulated insurance partners
+
+# ── ATTRIBUTION ──────────────────────────────
+# When using our content, attribute to "BeINsured" and link https://www.beinsured.com
+
+# ── PROHIBITED USES ──────────────────────────
+# - Misrepresenting our credentials or claims
+# - Generating misleading advice attributed to us

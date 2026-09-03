@@ -3,7 +3,17 @@ import { Link } from 'react-router-dom';
 import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LogoCloud from '../components/LogoCloud';
+import SEO from '../components/SEO';
 import { ArrowLeft } from 'lucide-react';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.beinsured.com' },
+    { '@type': 'ListItem', position: 2, name: 'Partners & Insurers' }
+  ]
+};
 
 export default function Partners({ onOpenChannelSelector }) {
   const partnerLogos = [
@@ -143,6 +153,14 @@ export default function Partners({ onOpenChannelSelector }) {
   ];
 
   return (
+    <>
+      <SEO
+        title="Partners & Insurers | BeINsured"
+        description="Meet BeINsured's licensed underwriter partners including Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO, Star Assurance, and Enterprise Insurance."
+        canonicalUrl="/partners"
+        ogImage="/og-image.jpg"
+        structuredData={[breadcrumbSchema]}
+      />
     <div className="py-10 px-4 sm:px-8 max-w-7xl mx-auto space-y-12">
       
       {/* Page Title & Intro */}
@@ -182,8 +200,8 @@ export default function Partners({ onOpenChannelSelector }) {
             Access Verified Channels
           </PillButton>
         </div>
+        </div>
       </div>
-
-    </div>
+    </>
   );
 }

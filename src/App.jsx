@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ChannelSelector from './components/ChannelSelector';
 import PolicyLookupModal from './components/PolicyLookupModal';
 import CookieConsent from './components/CookieConsent';
 import TopSubtleHeroBackground from './components/TopSubtleHeroBackground';
+import SEO from './components/SEO';
 import { PageTransition } from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -80,47 +82,49 @@ export default function App() {
   const [policyLookupOpen, setPolicyLookupOpen] = useState(false);
 
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="relative min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900 overflow-x-hidden">
-        
-        {/* Subtle Top Hero Background Image Layer */}
-        <TopSubtleHeroBackground />
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="relative min-h-screen flex flex-col bg-brand-cream text-brand-dark selection:bg-[#FEBD19] selection:text-slate-900 overflow-x-hidden">
+          
+          {/* Subtle Top Hero Background Image Layer */}
+          <TopSubtleHeroBackground />
 
-        {/* Header Navigation */}
-        <Header 
-          onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-        />
-
-        {/* Main Page View with Animated Routes */}
-        <main className="flex-1 z-10">
-          <AnimatedRoutes 
+          {/* Header Navigation */}
+          <Header 
             onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-            onOpenPolicyLookup={() => setPolicyLookupOpen(true)}
           />
-        </main>
 
-        {/* Footer */}
-        <Footer 
-          onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-        />
+          {/* Main Page View with Animated Routes */}
+          <main className="flex-1 z-10">
+            <AnimatedRoutes 
+              onOpenChannelSelector={() => setChannelSelectorOpen(true)}
+              onOpenPolicyLookup={() => setPolicyLookupOpen(true)}
+            />
+          </main>
 
-        {/* Global Cookie Consent Floating Banner & Re-Open Trigger */}
-        <CookieConsent />
+          {/* Footer */}
+          <Footer 
+            onOpenChannelSelector={() => setChannelSelectorOpen(true)}
+          />
 
-        {/* Modals */}
-        <ChannelSelector 
-          isOpen={channelSelectorOpen}
-          onClose={() => setChannelSelectorOpen(false)}
-        />
+          {/* Global Cookie Consent Floating Banner & Re-Open Trigger */}
+          <CookieConsent />
 
-        <PolicyLookupModal 
-          isOpen={policyLookupOpen}
-          onClose={() => setPolicyLookupOpen(false)}
-          onOpenChannelSelector={() => setChannelSelectorOpen(true)}
-        />
+          {/* Modals */}
+          <ChannelSelector 
+            isOpen={channelSelectorOpen}
+            onClose={() => setChannelSelectorOpen(false)}
+          />
 
-      </div>
-    </BrowserRouter>
+          <PolicyLookupModal 
+            isOpen={policyLookupOpen}
+            onClose={() => setPolicyLookupOpen(false)}
+            onOpenChannelSelector={() => setChannelSelectorOpen(true)}
+          />
+
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }

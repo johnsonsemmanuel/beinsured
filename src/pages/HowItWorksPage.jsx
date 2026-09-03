@@ -3,6 +3,16 @@ import SectionTag from '../components/SectionTag';
 import PinnedHowItWorks from '../components/PinnedHowItWorks';
 import PillButton from '../components/PillButton';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.beinsured.com' },
+    { '@type': 'ListItem', position: 2, name: 'How It Works' }
+  ]
+};
 
 export default function HowItWorksPage({ onOpenChannelSelector }) {
   const steps = [
@@ -53,6 +63,14 @@ export default function HowItWorksPage({ onOpenChannelSelector }) {
   ];
 
   return (
+    <>
+      <SEO
+        title="How It Works | BeINsured"
+        description="Learn how to buy motor insurance in minutes via USSD *170#, WhatsApp, or MTN MoMo. Simple steps to get your car insured on your phone."
+        canonicalUrl="/how-it-works"
+        ogImage="/og-image.jpg"
+        structuredData={[breadcrumbSchema]}
+      />
     <div className="space-y-16 sm:space-y-24 pb-12">
       <ScrollReveal>
         <section className="pt-6 sm:pt-10 px-4 sm:px-8 max-w-7xl mx-auto">
@@ -121,6 +139,7 @@ export default function HowItWorksPage({ onOpenChannelSelector }) {
           </div>
         </section>
       </ScrollReveal>
-    </div>
+      </div>
+    </>
   );
 }

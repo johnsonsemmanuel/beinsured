@@ -2,10 +2,28 @@ import React from 'react';
 import SectionTag from '../components/SectionTag';
 import PillButton from '../components/PillButton';
 import LegitimacyBanner from '../components/LegitimacyBanner';
+import SEO from '../components/SEO';
 import { ShieldCheck, Users, Smartphone } from 'lucide-react';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.beinsured.com' },
+    { '@type': 'ListItem', position: 2, name: 'About Us' }
+  ]
+};
 
 export default function About({ onOpenChannelSelector }) {
   return (
+    <>
+      <SEO
+        title="About Us | BeINsured"
+        description="Learn about BeINsured, a product of BlueSPACE Financial. We're making motor insurance simple, instant, and accessible for every Ghanaian driver."
+        canonicalUrl="/about"
+        ogImage="/og-image.jpg"
+        structuredData={[breadcrumbSchema]}
+      />
     <div className="space-y-16 sm:space-y-24 pb-12">
 
       {/* Hero */}
@@ -130,6 +148,7 @@ export default function About({ onOpenChannelSelector }) {
       {/* Legitimacy */}
       <LegitimacyBanner onOpenChannelSelector={onOpenChannelSelector} />
 
-    </div>
+      </div>
+    </>
   );
 }
