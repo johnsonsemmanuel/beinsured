@@ -14,6 +14,37 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who owns BeINsured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BeINsured is a product of BlueSPACE Financial, a leading fintech company committed to making financial services accessible to every Ghanaian.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Which insurance companies back BeINsured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+          text: 'BeINsured partners with Ghana\'s top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All policies are underwritten and regulated by the National Insurance Commission (NIC).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'When was BeINsured launched?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BeINsured was launched to simplify motor insurance for drivers across Ghana by partnering with the country\'s top insurance underwriters and leveraging mobile technology.'
+      }
+    }
+  ]
+};
+
 export default function About({ onOpenChannelSelector }) {
   return (
     <>
@@ -22,7 +53,7 @@ export default function About({ onOpenChannelSelector }) {
         description="Learn about BeINsured, a product of BlueSPACE Financial. We're making motor insurance simple, instant, and accessible for every Ghanaian driver."
         canonicalUrl="/about"
         ogImage="/og-image.jpg"
-        structuredData={[breadcrumbSchema]}
+        structuredData={[breadcrumbSchema, faqSchema]}
       />
     <div className="space-y-16 sm:space-y-24 pb-12">
 
@@ -142,6 +173,39 @@ export default function About({ onOpenChannelSelector }) {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <SectionTag text="Frequently Asked Questions" className="justify-center" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Common questions about BeINsured
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">Who owns BeINsured?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              BeINsured is a product of BlueSPACE Financial, a leading fintech company committed to making financial services accessible to every Ghanaian.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">Which insurance companies back BeINsured?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              BeINsured partners with Ghana's top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All policies are underwritten and regulated by the National Insurance Commission (NIC).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">When was BeINsured launched?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              BeINsured was launched to simplify motor insurance for drivers across Ghana by partnering with the country's top insurance underwriters and leveraging mobile technology.
+            </p>
+          </div>
         </div>
       </section>
 

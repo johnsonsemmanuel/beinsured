@@ -14,6 +14,95 @@ const breadcrumbSchema = {
   ]
 };
 
+const howToSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Buy motor insurance via USSD *170#',
+    description: 'For MTN users only, buy motor insurance directly from your phone by dialling *170#.',
+    step: [
+      { '@type': 'HowToStep', name: 'Dial *170#', text: 'Dial *170# on your MTN line' },
+      { '@type': 'HowToStep', name: 'Select Financial Services', text: 'Select Option 5 (Financial Services)' },
+      { '@type': 'HowToStep', name: 'Choose Insurance', text: 'Choose Option 4 (Insurance)' },
+      { '@type': 'HowToStep', name: 'Select BeINsured Motor', text: 'Select BeINsured Motor' },
+      { '@type': 'HowToStep', name: 'Enter vehicle registration', text: 'Enter your vehicle registration number' },
+      { '@type': 'HowToStep', name: 'Select protection plan', text: 'Select your preferred protection plan' },
+      { '@type': 'HowToStep', name: 'Complete payment', text: 'Enter your MoMo PIN to complete payment' },
+      { '@type': 'HowToStep', name: 'Receive digital sticker', text: 'Receive digital insurance sticker via SMS' }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Buy motor insurance via WhatsApp Bot',
+    description: 'Start a conversation on WhatsApp and purchase your motor insurance through our 24/7 Auto Bot.',
+    step: [
+      { '@type': 'HowToStep', name: 'Save WhatsApp number', text: 'Save the BeINsured WhatsApp number' },
+      { '@type': 'HowToStep', name: 'Send greeting', text: 'Send a greeting message' },
+      { '@type': 'HowToStep', name: 'Enter vehicle details', text: 'Follow the bot prompts to enter your vehicle details' },
+      { '@type': 'HowToStep', name: 'Select protection plan', text: 'Select your preferred protection plan' },
+      { '@type': 'HowToStep', name: 'Confirm MoMo number', text: 'Confirm your MoMo number for payment' },
+      { '@type': 'HowToStep', name: 'Enter MoMo PIN', text: 'Enter your MoMo PIN when prompted' },
+      { '@type': 'HowToStep', name: 'Receive digital sticker', text: 'Receive your digital insurance sticker instantly' }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Buy motor insurance via MTN MoMo App',
+    description: 'Find BeINsured on the MTN MoMo Marketplace and purchase motor insurance directly through the app.',
+    step: [
+      { '@type': 'HowToStep', name: 'Open MoMo app', text: 'Open your MTN MoMo app' },
+      { '@type': 'HowToStep', name: 'Navigate to Financial Services', text: 'Navigate to Financial Services' },
+      { '@type': 'HowToStep', name: 'Select Motor Insurance', text: 'Select Motor Insurance' },
+      { '@type': 'HowToStep', name: 'Choose BeINsured', text: 'Choose BeINsured Car Insurance' },
+      { '@type': 'HowToStep', name: 'Enter vehicle registration', text: 'Enter your vehicle registration number' },
+      { '@type': 'HowToStep', name: 'Select protection plan', text: 'Select your preferred protection plan' },
+      { '@type': 'HowToStep', name: 'Confirm payment', text: 'Confirm payment with your MoMo PIN' },
+      { '@type': 'HowToStep', name: 'Receive digital sticker', text: 'Receive digital insurance sticker instantly' }
+    ]
+  }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to buy motor insurance on BeINsured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Buying motor insurance on BeINsured takes less than 2 minutes. Whether you use USSD *170#, WhatsApp, or the MTN MoMo app, you can get insured instantly.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need internet to use USSD *170#?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. USSD *170# works without internet. You only need an active MTN SIM card to buy motor insurance directly from your phone.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of car insurance are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BeINsured offers Third-Party and Comprehensive motor insurance protection. Both are available instantly via USSD, WhatsApp, or MTN MoMo.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is my digital insurance sticker valid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every policy issued through BeINsured generates an official electronic policy certificate backed by a licensed underwriter and regulated by the National Insurance Commission (NIC).'
+      }
+    }
+  ]
+};
+
 export default function HowItWorksPage({ onOpenChannelSelector }) {
   const steps = [
     {
@@ -69,7 +158,7 @@ export default function HowItWorksPage({ onOpenChannelSelector }) {
         description="Learn how to buy motor insurance in minutes via USSD *170#, WhatsApp, or MTN MoMo. Simple steps to get your car insured on your phone."
         canonicalUrl="/how-it-works"
         ogImage="/og-image.jpg"
-        structuredData={[breadcrumbSchema]}
+        structuredData={[breadcrumbSchema, ...howToSchemas, faqSchema]}
       />
     <div className="space-y-16 sm:space-y-24 pb-12">
       <ScrollReveal>
@@ -136,6 +225,48 @@ export default function HowItWorksPage({ onOpenChannelSelector }) {
                 </ol>
               </div>
             ))}
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* FAQ Section */}
+      <ScrollReveal delay={0.15}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <SectionTag text="Frequently Asked Questions" className="justify-center" />
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Common questions about buying car insurance
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">How long does it take to buy motor insurance on BeINsured?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Buying motor insurance on BeINsured takes less than 2 minutes. Whether you use USSD *170#, WhatsApp, or the MTN MoMo app, you can get insured instantly.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">Do I need internet to use USSD *170#?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                No. USSD *170# works without internet. You only need an active MTN SIM card to buy motor insurance directly from your phone.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">What types of car insurance are available?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                BeINsured offers Third-Party and Comprehensive motor insurance protection. Both are available instantly via USSD, WhatsApp, or MTN MoMo.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">Is my digital insurance sticker valid?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Yes. Every policy issued through BeINsured generates an official electronic policy certificate backed by a licensed underwriter and regulated by the National Insurance Commission (NIC).
+              </p>
+            </div>
           </div>
         </section>
       </ScrollReveal>

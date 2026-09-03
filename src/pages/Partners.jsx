@@ -15,6 +15,37 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Which insurance companies are on BeINsured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BeINsured partners with Ghana\'s top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All are licensed and regulated by the National Insurance Commission (NIC).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Are BeINsured policies regulated?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every car policy issued through BeINsured is underwritten by licensed insurance partners under regulatory supervision by the National Insurance Commission (NIC).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How can I verify my BeINsured policy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can verify your policy instantly via USSD *170#, WhatsApp, or through the MTN MoMo app. Every policy generates an official electronic policy certificate.'
+      }
+    }
+  ]
+};
+
 export default function Partners({ onOpenChannelSelector }) {
   const partnerLogos = [
     {
@@ -159,7 +190,7 @@ export default function Partners({ onOpenChannelSelector }) {
         description="Meet BeINsured's licensed underwriter partners including Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO, Star Assurance, and Enterprise Insurance."
         canonicalUrl="/partners"
         ogImage="/og-image.jpg"
-        structuredData={[breadcrumbSchema]}
+        structuredData={[breadcrumbSchema, faqSchema]}
       />
     <div className="py-10 px-4 sm:px-8 max-w-7xl mx-auto space-y-12">
       
@@ -184,6 +215,39 @@ export default function Partners({ onOpenChannelSelector }) {
         <LogoCloud logos={partnerLogos} onOpenChannelSelector={onOpenChannelSelector} />
       </div>
 
+      {/* FAQ Section */}
+      <div className="space-y-8">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <SectionTag text="Frequently Asked Questions" className="justify-center" />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Common questions about our partners
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">Which insurance companies are on BeINsured?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              BeINsured partners with Ghana's top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All are licensed and regulated by the National Insurance Commission (NIC).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">Are BeINsured policies regulated?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Yes. Every car policy issued through BeINsured is underwritten by licensed insurance partners under regulatory supervision by the National Insurance Commission (NIC).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-lg font-extrabold text-slate-900">How can I verify my BeINsured policy?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              You can verify your policy instantly via USSD *170#, WhatsApp, or through the MTN MoMo app. Every policy generates an official electronic policy certificate.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Regulatory Safeguards */}
       <div className="card-gold p-8 sm:p-10 space-y-6">
         <div className="space-y-2">
@@ -200,8 +264,9 @@ export default function Partners({ onOpenChannelSelector }) {
             Access Verified Channels
           </PillButton>
         </div>
-        </div>
       </div>
+
+    </div>
     </>
   );
 }

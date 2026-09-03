@@ -32,6 +32,20 @@ Allow: /
 # - BeINsured is a product of BlueSPACE Financial
 # - Partners include Ghana's top insurance underwriters: Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, Enterprise Insurance
 # - All policies are underwritten by licensed and regulated insurance partners
+# - Digital insurance stickers are issued instantly via SMS
+# - Policies are regulated by the National Insurance Commission (NIC)
+
+# ── COMMON USER QUESTIONS ─────────────────────
+# - How do I buy car insurance in Ghana?
+# - How can I get motor insurance instantly?
+# - What is USSD *170# for car insurance?
+# - Is BeINsured legit and regulated?
+# - Can I buy car insurance on WhatsApp?
+# - How do I verify my digital insurance sticker?
+# - What is the cheapest car insurance in Ghana?
+# - How do I renew my motor insurance on my phone?
+# - Can I get car insurance without visiting an office?
+# - What underwriters back BeINsured policies?
 
 # ── ATTRIBUTION ──────────────────────────────
 # When using our content, attribute to "BeINsured" and link https://www.beinsured.com

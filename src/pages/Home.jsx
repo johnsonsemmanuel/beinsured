@@ -52,6 +52,45 @@ const breadcrumbSchema = {
   ]
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I buy motor insurance on BeINsured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can buy motor insurance in three ways: dial *170# on MTN, chat with our WhatsApp bot 24/7, or find BeINsured in the MTN MoMo Marketplace. All channels deliver instant digital policy verification.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does it take to get insured?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Getting motor insurance on BeINsured takes less than 2 minutes. Enter your vehicle registration number, choose Third-Party or Comprehensive protection, pay via MoMo, and receive your digital insurance sticker instantly.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is BeINsured legit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. BeINsured is a product of BlueSPACE Financial and partners with licensed Ghanaian insurance underwriters including Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All policies are underwritten and regulated by the National Insurance Commission (NIC).'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I manage my car insurance from my phone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. BeINsured is mobile-native. You can buy, renew, verify, and manage your motor insurance directly from your smartphone via USSD, WhatsApp, or the MTN MoMo app without visiting an office.'
+      }
+    }
+  ]
+};
+
 export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
   const images = {
     aboutDriver: "/trotro-station.jpg",
@@ -66,7 +105,7 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
         description="Buy motor insurance in minutes via USSD *170#, WhatsApp, or MTN MoMo. BeINsured brings Ghana's top insurance companies together in one marketplace."
         canonicalUrl="/"
         ogImage="/og-image.jpg"
-        structuredData={[organizationSchema, websiteSchema, breadcrumbSchema]}
+        structuredData={[organizationSchema, websiteSchema, breadcrumbSchema, faqSchema]}
       />
     <div className="space-y-16 sm:space-y-24 pb-12">
       
@@ -266,6 +305,48 @@ export default function Home({ onOpenChannelSelector, onOpenPolicyLookup }) {
             </p>
           </div>
           <BrandVideoPlayer />
+        </section>
+      </ScrollReveal>
+
+      {/* 8.5 FAQ SECTION */}
+      <ScrollReveal delay={0.1}>
+        <section className="px-4 sm:px-8 max-w-7xl mx-auto space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <SectionTag text="Frequently Asked Questions" className="justify-center" />
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Common questions about BeINsured
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">How do I buy motor insurance on BeINsured?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                You can buy motor insurance in three ways: dial *170# on MTN, chat with our WhatsApp bot 24/7, or find BeINsured in the MTN MoMo Marketplace. All channels deliver instant digital policy verification.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">How long does it take to get insured?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Getting motor insurance on BeINsured takes less than 2 minutes. Enter your vehicle registration number, choose Third-Party or Comprehensive protection, pay via MoMo, and receive your digital insurance sticker instantly.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">Is BeINsured legit?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Yes. BeINsured is a product of BlueSPACE Financial and partners with licensed Ghanaian insurance underwriters including Donewell Assurance, Vanguard Assurance, Hollard Ghana, GLICO General Insurance, Star Assurance, and Enterprise Insurance. All policies are underwritten and regulated by the National Insurance Commission (NIC).
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+              <h3 className="text-lg font-extrabold text-slate-900">Can I manage my car insurance from my phone?</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Yes. BeINsured is mobile-native. You can buy, renew, verify, and manage your motor insurance directly from your smartphone via USSD, WhatsApp, or the MTN MoMo app without visiting an office.
+              </p>
+            </div>
+          </div>
         </section>
       </ScrollReveal>
 
